@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('notifications', function (Blueprint $table) {
             $table->id();
+            $table->String('id_user')->nullable();
+            $table->String('id_game')->nullable();
+            $table->String('game_name')->nullable();
+            $table->String('game_info')->nullable();
+            $table->String('type')->nullable();
             $table->timestamps();
         });
     }

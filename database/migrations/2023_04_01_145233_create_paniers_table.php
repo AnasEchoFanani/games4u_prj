@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('paniers', function (Blueprint $table) {
             $table->id();
+            $table->String('id_game')->nullable();
+            $table->String('id_user')->nullable();
+            $table->String('quantite_game')->nullable();
+            $table->String('confirme')->nullable();
             $table->timestamps();
         });
     }
