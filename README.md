@@ -1,6 +1,6 @@
 # Games4U
 
-Games4U is a web application that allows users to browse and play a variety of online games.
+Games4U is a web application that allows users to browse and buy games.
 
 ## Table of Contents
 
