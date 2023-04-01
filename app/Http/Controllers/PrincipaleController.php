@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PrincipaleController extends Controller
 {
     public function index(){
-        return view('Home.index',compact('product'));
+        return view('Home.index');
     }
 }
