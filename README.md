@@ -14,7 +14,7 @@ A website that provides users with the latest news and updates on all things awe
 
 ## About
 
-Awesome Website is a one-stop shop for all things awesome. We provide users with the latest news, updates, and reviews on everything from technology and entertainment to food and travel.
+Games4u is a one-stop shop for all things awesome. We provide users with the latest news, updates, and reviews on everything from technology and entertainment to food and travel.
 
 ## Features
 
@@ -25,7 +25,7 @@ Awesome Website is a one-stop shop for all things awesome. We provide users with
 
 ## Getting Started
 
-To get started with Awesome Website, you'll need:
+To get started with Games4u, you'll need:
 
 - A web browser (we recommend Google Chrome or Mozilla Firefox)
 - An internet connection
@@ -47,7 +47,7 @@ To get started with Awesome Website, you'll need:
 
 ## Contributing
 
-We welcome contributions from the community! If you're interested in contributing to Awesome Website, please read our [contribution guidelines](CONTRIBUTING.md) for more information.
+We welcome contributions from the community! If you're interested in contributing to Games4u, please read our [contribution guidelines](CONTRIBUTING.md) for more information.
 
 ## License
 
