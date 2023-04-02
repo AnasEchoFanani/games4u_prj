@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/',[AdminController::class , 'index']);
-});
+    Route::get('/',[AdminController::class , 'index'])->name('index');
+})->name('admin');
 
 
 //User__Route___________________________________________________________________________________________________
