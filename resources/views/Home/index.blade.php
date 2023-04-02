@@ -143,8 +143,7 @@
                 </div>
                 <div class="cub">
                     <a class="incub" href="#">
-                        <?xml version="1.0" ?><svg class="cole" viewBox="0 0 32
-                                                                32" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="cole" viewBox="0 0 3232" xmlns="http://www.w3.org/2000/svg">
                             <title />
                             <g id="about">
                                 <path d="M16,16A7,7,0,1,0,9,9,7,7,0,0,0,16,16ZM16,4a5,5,0,1,1-5,5A5,5,0,0,1,16,4Z" />
