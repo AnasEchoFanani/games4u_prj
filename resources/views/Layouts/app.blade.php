@@ -23,17 +23,17 @@
             </button>
             <div class="navbar-collapse collapse" id="collapseNavbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link text-white" href="/admin">Home</a>
+                    <li class="nav-item @yield('style-active-home')">
+                        <a class="nav-link text-white" href="{{ route('admin.index') }}">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="">Ajouter Produit</a>
+                    <li class="nav-item @yield('style-active-add')">
+                        <a class="nav-link text-white" href="{{ route('admin.create') }}">Create Game</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item @yield('style-active-show')">
                         <a class="nav-link text-white" href="">Afficher Commande</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto hover">
                     <li class="nav-item">
                         <a href="" class="nav-link text-white">Deconnexion</a>
                     </li>

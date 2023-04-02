@@ -17,7 +17,7 @@ class AdminController extends Controller
 
     public function create(){
         $categories = category::all();
-        return view('Admin.create');
+        return view('Admin.create' , compact('categories'));
     }
 
     public function store(Request $request){

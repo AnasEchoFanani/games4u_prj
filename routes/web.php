@@ -10,7 +10,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/',[AdminController::class , 'index'])->name('index');
+    Route::get('/',[AdminController::class , 'index'])->name('admin.index');
+    Route::get('/create',[AdminController::class , 'create'])->name('admin.create');
+    Route::post('/store',[AdminController::class , 'store'])->name('admin.store');
 })->name('admin');
 
 
