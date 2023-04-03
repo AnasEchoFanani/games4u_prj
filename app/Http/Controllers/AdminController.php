@@ -96,14 +96,14 @@ class AdminController extends Controller
 
     public function edit($id)
     {
-        $product = product::findOrFail($id);
-        $categories = genre::all();
-        return view('Admin.update', compact('product', 'categories'));
+        $product = product::select()->where('id', $id)->get();
+        $genre = genre::all();
+        return view('Admin.update', compact('product', 'genre'));
     }
 
     public function update(Request $request, $id)
     {
-        $product = product::findOrFail($id);
+        $product = product::select()->where('id', $id)->first();
 
 
         if ($request->hasFile('video')) {

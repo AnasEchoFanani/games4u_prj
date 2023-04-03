@@ -36,9 +36,9 @@
                                                     </form>
                                                 </li> / &nbsp;
                                                 <li class="list-inline-item">
-                                                    <form action="{{ route('admin.destroy' , $produits->id ) }}">
+                                                    <form action="{{ route('admin.destroy', $produits->id) }}" method="POST">
                                                         @csrf
-                                                        @method('DELETE')
+                                                        {{ method_field('DELETE') }}
                                                         <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
                                                     </form>
                                                 </li>
