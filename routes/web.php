@@ -9,11 +9,18 @@ use Illuminate\Support\Facades\Route;
 //Admin__Route___________________________________________________________________________________________________
 
 
+/*
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/',[AdminController::class , 'index'])->name('admin.index');
     Route::get('/create',[AdminController::class , 'create'])->name('admin.create');
     Route::post('/store',[AdminController::class , 'store'])->name('admin.store');
+    Route::get('edit/{$id}',[AdminController::class , 'edit'])->name('admin.edit');
+    Route::post('/update/{$id}',[AdminController::class , 'update'])->name('admin.update');
+    Route::delete('/destroy/{$id}',[AdminController::class , 'destroy'])->name('admin.destroy');
 })->name('admin');
+*/
+
+Route::resource('admin', AdminController::class);
 
 
 //User__Route___________________________________________________________________________________________________
