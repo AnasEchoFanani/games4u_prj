@@ -183,19 +183,19 @@
                                     <div class="col-md-4">
                                         <div class="mb-3">
                                             <label for="photo_1" class="form-label">Photo</label>
-                                            <input class="form-control" type="file" id="photo_1" name="photo_1" accept=".jpg,.jpeg,.png,.webp" required>
+                                            <input class="form-control" type="file" id="photo_1" name="photo_1" accept="image/*" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
                                             <label for="photo_2" class="form-label">Photo 1</label>
-                                            <input class="form-control" type="file" id="photo_2" name="photo_2" accept=".jpg,.jpeg,.png,.webp">
+                                            <input class="form-control" type="file" id="photo_2" name="photo_2" accept="image/*">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
                                             <label for="photo_3" class="form-label">Photo 2</label>
-                                            <input class="form-control" type="file" id="photo_3" name="photo_3" accept=".jpg,.jpeg,.png,.webp">
+                                            <input class="form-control" type="file" id="photo_3" name="photo_3" accept="image/*">
                                         </div>
                                     </div>
                                 </div>
