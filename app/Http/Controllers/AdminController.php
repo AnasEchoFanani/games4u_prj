@@ -38,7 +38,7 @@ class AdminController extends Controller
 
         if ($request->hasFile('photo_1')) {
             $file_extension_1 = $request->photo_1->getClientOriginalExtension();
-            sleep(1);
+            sleep(2);
             $file_name_1 = time() . '.' . $file_extension_1;
             $path = 'Folder_img';
             $request->photo_1->move($path, $file_name_1);
@@ -47,7 +47,7 @@ class AdminController extends Controller
 
         if ($request->hasFile('photo_2')) {
             $file_extension_2 = $request->photo_2->getClientOriginalExtension();
-            sleep(1);
+            sleep(3);
             $file_name_2 = time() . '.' . $file_extension_2;
             $path = 'Folder_img';
             $request->photo_2->move($path, $file_name_2);
@@ -56,7 +56,7 @@ class AdminController extends Controller
 
         if ($request->hasFile('photo_3')) {
             $file_extension_3 = $request->photo_3->getClientOriginalExtension();
-            sleep(1);
+            sleep(4);
             $file_name_3 = time() . '.' . $file_extension_3;
             $path = 'Folder_img';
             $photoo = $request->photo_3->move($path, $file_name_3);
@@ -91,7 +91,7 @@ class AdminController extends Controller
         $product->Espace_disque_max = $request->Espace_disque_max;
 
         $product->save();
-        return redirect()->route('Admin.index');
+        return redirect()->route('admin.index');
     }
 
     public function edit($id)

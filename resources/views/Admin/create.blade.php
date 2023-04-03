@@ -38,34 +38,148 @@
                             <input class="form-control" type="date" id="date" name="date">
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="CATpoduit" class="form-label">Categorie <span class="text-danger">*</span></label>
-                            <select class="form-select" name="categorie" id="categorie" required>
-                                <option selected disabled value="">Select a Category</option>
+                            <label for="genre" class="form-label">genre <span class="text-danger">*</span></label>
+                            <select class="form-select" name="genre" id="genre" >
+                                <option selected disabled value="">Select a genre</option>
                                 @foreach($genre as $Categoriess)
                                 <option value="{{$Categoriess->nom}}">{{$Categoriess->nom}}</option>
                                 @endforeach
                             </select>
+
                         </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                        <label for="devices" class="form-label">devices <span class="text-danger">*</span></label>
+                            <select class="form-select" name="devices" id="devices">
+                                <option value="">select devices </option>
+                                <option value="windows">windows </option>
+                                <option value="apple">apple</option>
+                                <option value="play">play</option>
+                                <option value="xbox">xbox</option>
+                                <option value="pc">pc</option>
+                                <option value="console">console </option>
+                                <option value="all">all</option>
+                            </select>
+                        </div>
+
                     </div>
                     <div class="row mb-3">
                         <div class="row mb-3">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="photo" class="form-label">Photo</label>
-                                        <input class="form-control" type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png,.webp" required>
+                                        <label for="type" class="form-label">type</label>
+                                        <input class="form-control" type="text" id="type" name="type" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="photo1" class="form-label">Photo 1</label>
-                                        <input class="form-control" type="file" id="photo1" name="photo1" accept=".jpg,.jpeg,.png,.webp">
+                                    <label for="Système_dexploitation_min" class="form-label">Système dexploitation min</label>
+                                        <input class="form-control" type="text" id="Système_dexploitation_min" name="Système_dexploitation_min" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label for="photo2" class="form-label">Photo 2</label>
-                                        <input class="form-control" type="file" id="photo2" name="photo2" accept=".jpg,.jpeg,.png,.webp">
+                                    <label for="Processeur_min" class="form-label">Processeur min</label>
+                                        <input class="form-control" type="text" id="Processeur_min" name="Processeur_min" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="Mémoire_vive_min" class="form-label">Mémoire_vive_min</label>
+                                        <input class="form-control" type="text" id="Mémoire_vive_min" name="Mémoire_vive_min" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="Graphiques_min" class="form-label">Graphiques_min</label>
+                                        <input class="form-control" type="text" id="Graphiques_min" name="Graphiques_min" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="DirectX_min" class="form-label">DirectX_min</label>
+                                        <input class="form-control" type="text" id="DirectX_min" name="DirectX_min" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="Réseau_min" class="form-label">Réseau_min</label>
+                                        <input class="form-control" type="text" id="Réseau_min" name="Réseau_min" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="Espace_disque_min" class="form-label">Espace_disque_min</label>
+                                        <input class="form-control" type="text" id="Espace_disque_min" name="Espace_disque_min" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="Système_dexploitation_max" class="form-label">Système_dexploitation_max</label>
+                                        <input class="form-control" type="text" id="Système_dexploitation_max" name="Système_dexploitation_max" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="Processeur_max" class="form-label">Processeur_max</label>
+                                        <input class="form-control" type="text" id="Processeur_max" name="Processeur_max" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="Mémoire_vive_max" class="form-label">Mémoire_vive_max</label>
+                                        <input class="form-control" type="text" id="Mémoire_vive_max" name="Mémoire_vive_max" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="Graphiques_max" class="form-label">Graphiques_max</label>
+                                        <input class="form-control" type="text" id="Graphiques_max" name="Graphiques_max" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="DirectX_max" class="form-label">DirectX_max</label>
+                                        <input class="form-control" type="text" id="DirectX_max" name="DirectX_max" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="Réseau_max" class="form-label">Réseau_max</label>
+                                        <input class="form-control" type="text" id="Réseau_max" name="Réseau_max" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                    <label for="Espace_disque_max" class="form-label">Espace_disque_max</label>
+                                        <input class="form-control" type="text" id="Espace_disque_max" name="Espace_disque_max" required>
+                                    </div>
+                                </div>
+                               
+                            </div>
+
+                        </div>
+                    <div class="row mb-3">
+                        <div class="row mb-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="photo_1" class="form-label">Photo</label>
+                                        <input class="form-control" type="file" id="photo_1" name="photo_1" accept=".jpg,.jpeg,.png,.webp" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="photo_2" class="form-label">Photo 1</label>
+                                        <input class="form-control" type="file" id="photo_2" name="photo_2" accept=".jpg,.jpeg,.png,.webp">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="photo_3" class="form-label">Photo 2</label>
+                                        <input class="form-control" type="file" id="photo_3" name="photo_3" accept=".jpg,.jpeg,.png,.webp">
                                     </div>
                                 </div>
                             </div>
