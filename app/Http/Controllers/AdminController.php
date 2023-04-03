@@ -16,8 +16,8 @@ class AdminController extends Controller
     }
 
     public function create(){
-        $categories = genre::all();
-        return view('Admin.create' , compact('categories'));
+        $genre = genre::all();
+        return view('Admin.create' , compact('genre'));
     }
 
     public function store(Request $request){
