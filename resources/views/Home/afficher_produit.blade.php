@@ -1,1 +1,3 @@
-thhrt
+@foreach($aas $ b)
+{{$b}}
+@endforeach
