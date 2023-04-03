@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\admin;
-use App\Models\category;
+use App\Models\genre;
 use App\Models\product;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
@@ -16,7 +16,7 @@ class AdminController extends Controller
     }
 
     public function create(){
-        $categories = category::all();
+        $categories = genre::all();
         return view('Admin.create' , compact('categories'));
     }
 
@@ -28,7 +28,7 @@ class AdminController extends Controller
 
     public function edit($id){
         $product = product::findOrFail($id);
-        $categories = category::all();
+        $categories = genre::all();
         return view('Admin.update',compact('product','categories'));
     }
 

@@ -41,7 +41,7 @@
                             <label for="CATpoduit" class="form-label">Categorie <span class="text-danger">*</span></label>
                             <select class="form-select" name="categorie" id="categorie" required>
                                 <option selected disabled value="">Select a Category</option>
-                                @foreach($categories as $Categoriess)
+                                @foreach($genre as $Categoriess)
                                 <option value="{{$Categoriess->nom}}">{{$Categoriess->nom}}</option>
                                 @endforeach
                             </select>
