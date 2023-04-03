@@ -202,20 +202,20 @@
 
                             </div>
                             <div class="row mb-3">
-                            <div class="row mb-3">
-                            <div class="row">
+                                <div class="row mb-3">
+                                    <div class="row">
 
-                                <label for="video" class="form-label"> video</label>
-                                <input class="form-control" type="file" id="video" name="video" accept="video/*">
-                                <br>
-                            </div>
-                            </div>
+                                        <label for="video" class="form-label"> video</label>
+                                        <input class="form-control" type="file" id="video" name="video" accept="video/*">
+                                        <br>
+                                    </div>
+                                </div>
                             </div>
 
-                            
+
                             <br>
                             <button type="submit" class="btn btn-primary">Ajouter Produit</button>
-                            
+
                         </div>
             </form>
         </div>
