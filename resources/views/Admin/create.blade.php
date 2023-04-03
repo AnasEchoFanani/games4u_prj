@@ -85,7 +85,7 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <div>
+                                            <div class="mb-3">
                                                 <label for="Processeur_min" class="form-label">Processeur min</label>
                                                 <input class="form-control" type="text" id="Processeur_min" name="Processeur_min" required>
                                             </div>
