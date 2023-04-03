@@ -29,7 +29,7 @@ class AdminController extends Controller
 
         if ($request->hasFile('video')) {
             $file_extension_video = $request->video->getClientOriginalExtension();
-            sleep(1);
+            sleep(0.1);
             $file_name_video = time() . '.' . $file_extension_video;
             $path = 'Folder_img';
             $request->video->move($path, $file_name_video);
@@ -38,7 +38,7 @@ class AdminController extends Controller
 
         if ($request->hasFile('photo_1')) {
             $file_extension_1 = $request->photo_1->getClientOriginalExtension();
-            sleep(2);
+            sleep(0.2);
             $file_name_1 = time() . '.' . $file_extension_1;
             $path = 'Folder_img';
             $request->photo_1->move($path, $file_name_1);
@@ -47,7 +47,7 @@ class AdminController extends Controller
 
         if ($request->hasFile('photo_2')) {
             $file_extension_2 = $request->photo_2->getClientOriginalExtension();
-            sleep(3);
+            sleep(0.3);
             $file_name_2 = time() . '.' . $file_extension_2;
             $path = 'Folder_img';
             $request->photo_2->move($path, $file_name_2);
@@ -56,7 +56,7 @@ class AdminController extends Controller
 
         if ($request->hasFile('photo_3')) {
             $file_extension_3 = $request->photo_3->getClientOriginalExtension();
-            sleep(4);
+            sleep(0.4);
             $file_name_3 = time() . '.' . $file_extension_3;
             $path = 'Folder_img';
             $photoo = $request->photo_3->move($path, $file_name_3);
@@ -111,6 +111,30 @@ class AdminController extends Controller
     public function destroy($id)
     {
         $product = product::findOrFail($id);
+            // delete existing photo_3 file if it exists
+            if ($product->photo_1) {
+                $file_path = public_path('Folder_img/' . $product->photo_1);
+                if (file_exists($file_path)) {
+                    unlink($file_path);
+                }
+            }
+            // delete existing photo_3 file if it exists
+            if ($product->photo_2) {
+                $file_path = public_path('Folder_img/' . $product->photo_2);
+                if (file_exists($file_path)) {
+                    unlink($file_path);
+                }
+            }
+            // delete existing photo_3 file if it exists
+            if ($product->photo_3) {
+                $file_path = public_path('Folder_img/' . $product->photo_3);
+                if (file_exists($file_path)) {
+                    unlink($file_path);
+                }
+            }
+
+
+
         $product->delete();
         return redirect()->back()->with('success', 'Product deleted successfully');
     }

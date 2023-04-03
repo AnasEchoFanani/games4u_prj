@@ -16,7 +16,7 @@
                                         <th scope="col">game_name</th>
                                         <th scope="col">price_game</th>
                                         <th scope="col">disponibiliter</th>
-                                        <th scope="col">categorie</th>
+                                        <th scope="col">genre</th>
                                         <th scope="col">Modifier / Supprimer</th>
                                     </tr>
                                 </thead>
@@ -48,7 +48,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
