@@ -16,7 +16,7 @@
                                         <th scope="col">game_name</th>
                                         <th scope="col">price_game</th>
                                         <th scope="col">disponibiliter</th>
-                                        <th scope="col">categorie</th>
+                                        <th scope="col">genre</th>
                                         <th scope="col">Modifier / Supprimer</th>
                                     </tr>
                                 </thead>
@@ -26,7 +26,7 @@
                                         <td data-searchable="{{$produits->game_name}}">{{$produits->game_name}}</td>
                                         <td>{{$produits->price_game}} DH</td>
                                         <td>{{$produits->disponibiliter}}</td>
-                                        <td data-searchable="{{$produits->categorie}}">{{$produits->categorie}}</td>
+                                        <td data-searchable="{{$produits->genre}}">{{$produits->genre}}</td>
                                         <td>
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">
@@ -48,7 +48,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
