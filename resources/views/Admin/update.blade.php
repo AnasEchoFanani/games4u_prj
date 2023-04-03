@@ -25,7 +25,7 @@
                     <div class="row">
                         <div class="col-md-3 mb-3">
                             <label for="PRXproduit" class="form-label">Prix DH <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text" placeholder="Prix DH" id="price_game" name="price_game" value="price_game" required>
+                            <input class="form-control" type="text" placeholder="Prix DH" id="price_game" name="price_game" value="{{$p->price_game}}" required>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="QTproduit" class="form-label">Disponibiliter <span class="text-danger">*</span></label>
