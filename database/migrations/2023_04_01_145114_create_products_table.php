@@ -15,14 +15,34 @@ return new class extends Migration
             $table->id();
             $table->String('game_name')->nullable();
             $table->String('info_game')->nullable();
-            $table->String('photo')->nullable();
-            $table->String('photo1')->nullable();
-            $table->String('photo2')->nullable();
-            $table->String('categorie')->nullable();
+            $table->String('video')->nullable();
+            $table->String('photo_1')->nullable();
+            $table->String('photo_2')->nullable();
+            $table->String('photo_3')->nullable();
             $table->String('price_game')->nullable();
             $table->String('disponibiliter')->nullable();
             $table->String('date')->nullable();
-            $table->String('category')->nullable();
+            $table->String('genre')->nullable();
+            $table->String('type')->nullable();
+
+            $table->String('Système_dexploitation_min')->nullable();
+            $table->String('Processeur_min')->nullable();
+            $table->String('Mémoire_vive_min')->nullable();
+            $table->String('Graphiques_min')->nullable();
+            $table->String('DirectX_min')->nullable();
+            $table->String('Réseau_min')->nullable();
+            $table->String('Espace_disque_min')->nullable();
+
+
+            $table->String('Système_dexploitation_max')->nullable();
+            $table->String('Processeur_max')->nullable();
+            $table->String('Mémoire_vive_max')->nullable();
+            $table->String('Graphiques_max')->nullable();
+            $table->String('DirectX_max')->nullable();
+            $table->String('Réseau_max')->nullable();
+            $table->String('Espace_disque_max')->nullable();
+            
+            $table->String('devices')->nullable();
             $table->timestamps();
         });
     }
