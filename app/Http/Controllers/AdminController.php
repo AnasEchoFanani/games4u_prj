@@ -111,25 +111,31 @@ class AdminController extends Controller
     public function destroy($id)
     {
         $product = product::findOrFail($id);
+            if ($product->video) {
+                $file_path_video = public_path('Folder_img/' . $product->video);
+                if (file_exists($file_path_video)) {
+                    unlink($file_path_video);
+                }
+            }
             // delete existing photo_3 file if it exists
             if ($product->photo_1) {
-                $file_path = public_path('Folder_img/' . $product->photo_1);
-                if (file_exists($file_path)) {
-                    unlink($file_path);
+                $file_path_photo_1 = public_path('Folder_img/' . $product->photo_1);
+                if (file_exists($file_path_photo_1)) {
+                    unlink($file_path_photo_1);
                 }
             }
             // delete existing photo_3 file if it exists
             if ($product->photo_2) {
-                $file_path = public_path('Folder_img/' . $product->photo_2);
-                if (file_exists($file_path)) {
-                    unlink($file_path);
+                $file_path_2 = public_path('Folder_img/' . $product->photo_2);
+                if (file_exists($file_path_2)) {
+                    unlink($file_path_2);
                 }
             }
             // delete existing photo_3 file if it exists
             if ($product->photo_3) {
-                $file_path = public_path('Folder_img/' . $product->photo_3);
-                if (file_exists($file_path)) {
-                    unlink($file_path);
+                $file_path_3 = public_path('Folder_img/' . $product->photo_3);
+                if (file_exists($file_path_3)) {
+                    unlink($file_path_3);
                 }
             }
 
