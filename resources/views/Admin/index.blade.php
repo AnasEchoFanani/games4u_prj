@@ -30,14 +30,17 @@
                                         <td>
                                             <ul class="list-inline">
                                                 <li class="list-inline-item">
-
-                                                    <button type="submit" class="btn btn-primary"><i class="fa fa-edit"></i></button>
-
+                                                    <form action="{{ route('admin.edit' , $produits->id ) }}">
+                                                        @csrf
+                                                        <button type="submit" class="btn btn-primary"><i class="fa fa-edit"></i></button>
+                                                    </form>
                                                 </li> / &nbsp;
                                                 <li class="list-inline-item">
-
-                                                    <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-
+                                                    <form action="{{ route('admin.destroy' , $produits->id ) }}">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                                    </form>
                                                 </li>
                                             </ul>
                                         </td>

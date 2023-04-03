@@ -13,6 +13,9 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/',[AdminController::class , 'index'])->name('admin.index');
     Route::get('/create',[AdminController::class , 'create'])->name('admin.create');
     Route::post('/store',[AdminController::class , 'store'])->name('admin.store');
+    Route::get('{$id}/edit',[AdminController::class , 'edit'])->name('admin.edit');
+    Route::post('{$id}/update',[AdminController::class , 'update'])->name('admin.update');
+    Route::post('{$id}/destroy',[AdminController::class , 'destroy'])->name('admin.destroy');
 })->name('admin');
 
 
