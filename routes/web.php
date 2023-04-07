@@ -21,6 +21,7 @@ Route::group(['prefix' => 'admin'], function () {
 */
 
 Route::resource('admin', AdminController::class);
+Route::get('/commande' ,[AdminController::class , 'commande'] )->name('commande');
 
 
 //User__Route___________________________________________________________________________________________________

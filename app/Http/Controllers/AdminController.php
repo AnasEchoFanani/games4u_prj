@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\admin;
+use App\Models\Commande;
 use App\Models\genre;
 use App\Models\product;
+
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+
 
 class AdminController extends Controller
 {
@@ -21,7 +24,17 @@ class AdminController extends Controller
         $genre = genre::all();
         return view('Admin.create', compact('genre'));
     }
+    public function show($id)
+    {
+        $comande = Commande::select()->where('numcom',$id)->get();
+        return view('admin.details' , compact('comande' ) );
+    }
+    public function commande(){
 
+        $c = Commande::all();
+        return view('Admin.commande', compact('c'));
+
+    }
     public function store(Request $request)
     {
         $product = new product();
