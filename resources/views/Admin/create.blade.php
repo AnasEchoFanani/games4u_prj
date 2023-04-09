@@ -39,10 +39,10 @@
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="genre" class="form-label">genre <span class="text-danger">*</span></label>
-                            <select class="form-select" name="genre" id="genre">
+                            <select class="form-select text-black" name="genre" id="genre">
                                 <option selected disabled value="">Select a genre</option>
                                 @foreach($genre as $Categoriess)
-                                <option value="{{$Categoriess->nom}}">{{$Categoriess->nom}}</option>
+                                <option value="{{$Categoriess->genre}}">{{$Categoriess->genre}}</option>
                                 @endforeach
                             </select>
 
@@ -72,9 +72,9 @@
                     </div>
                     <div class="row mb-3">
                         <div class="row mb-3">
-                            <div class="row ms-5">
+                            <div class="row ms-lg-5">
 
-                                <div class="card col-md-5 ms-5 bg-dark text-white border-white">
+                                <div class="card col-md-5 ms-lg-5 bg-dark text-white border-white">
                                     <div class="card-header">Configue Minimale</div>
                                     <div class="card-body">
 

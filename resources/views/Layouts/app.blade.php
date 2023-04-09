@@ -32,6 +32,9 @@
                     <li class="nav-item @yield('style-active-show')">
                         <a class="nav-link text-white" href="{{ route('commande') }}">Afficher Commande</a>
                     </li>
+                    <li class="nav-item @yield('style-active-genre')">
+                        <a class="nav-link text-white" href="{{ route('createGenre') }}">Create Genre</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ms-auto hover">
                     <li class="nav-item">

@@ -19,6 +19,31 @@ class AdminController extends Controller
         return view('Admin.index', compact('product'));
     }
 
+
+
+    public function createGenre(){
+        $genre = genre::all();
+        return view('Admin.createGenre',compact('genre'));
+    }
+
+    public function storeGenre(Request $request){
+        $genre = new genre;
+
+        $genre->genre = $request->genre;
+
+        $genre->save();
+        return redirect()->route('createGenre');
+    }
+
+    public function destroyGenre($id)
+    {
+        $genre = genre::findOrFail($id);
+        $genre->delete();
+        return redirect()->back()->with('success', 'Product deleted successfully');
+    }
+
+
+
     public function create()
     {
         $genre = genre::all();

@@ -22,7 +22,9 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::resource('admin', AdminController::class);
 Route::get('/commande' ,[AdminController::class , 'commande'] )->name('commande');
-
+Route::get('/createGenre',[AdminController::class, 'createGenre'])->name('createGenre');
+Route::post('/storeGenre',[AdminController::class , 'storeGenre'])->name('storeGenre');
+Route::delete('/destroygenre/{id}', [AdminController::class , 'destroyGenre'])->name('destroyGenre');
 
 //User__Route___________________________________________________________________________________________________
 
