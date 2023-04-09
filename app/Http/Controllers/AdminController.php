@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\admin;
+use App\Models\Commande;
 use App\Models\genre;
 use App\Models\product;
+
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+
 
 class AdminController extends Controller
 {
@@ -16,12 +19,47 @@ class AdminController extends Controller
         return view('Admin.index', compact('product'));
     }
 
+
+
+    public function createGenre(){
+        $genre = genre::all();
+        return view('Admin.createGenre',compact('genre'));
+    }
+
+    public function storeGenre(Request $request){
+        $genre = new genre;
+
+        $genre->genre = $request->genre;
+
+        $genre->save();
+        return redirect()->route('createGenre');
+    }
+
+    public function destroyGenre($id)
+    {
+        $genre = genre::findOrFail($id);
+        $genre->delete();
+        return redirect()->back()->with('success', 'Product deleted successfully');
+    }
+
+
+
     public function create()
     {
         $genre = genre::all();
         return view('Admin.create', compact('genre'));
     }
+    public function show($id)
+    {
+        $comande = Commande::select()->where('numcom',$id)->get();
+        return view('admin.details' , compact('comande' ) );
+    }
+    public function commande(){
 
+        $c = Commande::all();
+        return view('Admin.commande', compact('c'));
+
+    }
     public function store(Request $request)
     {
         $product = new product();
