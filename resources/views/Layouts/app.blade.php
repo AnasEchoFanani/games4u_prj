@@ -30,7 +30,7 @@
                         <a class="nav-link text-white" href="{{ route('admin.create') }}">Create Game</a>
                     </li>
                     <li class="nav-item @yield('style-active-show')">
-                        <a class="nav-link text-white" href="">Afficher Commande</a>
+                        <a class="nav-link text-white" href="{{ route('commande') }}">Afficher Commande</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto hover">
