@@ -17,7 +17,7 @@
         <tr>
           <td>{{$cs->numcom}}</td>
           <td>{{$cs->created_at}}</td>
-          <td><a class="btn btn-primary" href="">Details</a></td>
+          <td><a class="btn btn-primary" href="{{url('admin' , $cs->numcom )}}">Details</a></td>
         </tr>
       @endforeach
     </tbody>
