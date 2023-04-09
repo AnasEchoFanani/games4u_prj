@@ -37,6 +37,8 @@
                             <tr>
                                 <th>nom produit</th>
                                 <th>prix</th>
+                                <th>Email</th>
+                                <th>Mode de paiment</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,6 +46,8 @@
                             <tr>
                                 <td>{{$c->name_pro}}</td>
                                 <td>{{$c->prix_pro}}</td>
+                                <td>{{$c->email_cl}}</td>
+                                <td>{{$c->mode_paiment}}</td>
                             </tr>
                             @endforeach
                         </tbody>
