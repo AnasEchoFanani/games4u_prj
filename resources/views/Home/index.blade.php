@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" href="frame_37612.png">
+    <link rel="icon" href="images_site/frame_37612.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/f4676ffe40.js" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('css/indexstl.css') }}">
     <title>Games4u</title>
 </head>
@@ -26,8 +23,7 @@
                         <input type="text" class="form-control inpt" placeholder="Search">
                         <div class="input-group-btn search">
                             <button class="btn btn-default" type="submit">
-                                <svg class="cole" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px"
-                                    height="50px">
+                                <svg class="cole" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
                                     <path d="M 21 3 C 11.621094 3 4 10.621094
                                             4 20 C 4 29.378906 11.621094 37 21
                                             37 C 24.710938 37 28.140625
@@ -49,8 +45,7 @@
                     <div class="incol12">
                         <div class="notif">
                             <div class="not"></div>
-                            <a href="#"><svg class="cole" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    viewBox="0 0 24 24">
+                            <a href="#"><svg class="cole" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path opacity=".3" d="M12 6.5c-2.49
                                                 0-4 2.02-4
                                                 4.5v6h8v-6c0-2.48-1.51-4.5-4-4.5z" />
@@ -82,8 +77,7 @@
                                         <g id="email">
                                             <g id="email-2" data-name="email">
                                                 <rect class="cls-1" width="24" height="24" />
-                                                <path class="cls-2"
-                                                    d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm0,2L12.5,10.47a1,1,0,0,1-1,0L5,6Z" />
+                                                <path class="cls-2" d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7A3,3,0,0,0,19,4Zm0,2L12.5,10.47a1,1,0,0,1-1,0L5,6Z" />
                                             </g>
                                         </g>
                                     </g>
@@ -137,8 +131,7 @@
                 </div>
                 <div class="cub">
                     <a class="incub" href="#"><svg class="cole" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path
-                                d="M8,11a1,1,0,1,0,1,1A1,1,0,0,0,8,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,12,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,16,11ZM12,2A10,10,0,0,0,2,12a9.89,9.89,0,0,0,2.26,6.33l-2,2a1,1,0,0,0-.21,1.09A1,1,0,0,0,3,22h9A10,10,0,0,0,12,2Zm0,18H5.41l.93-.93a1,1,0,0,0,.3-.71,1,1,0,0,0-.3-.7A8,8,0,1,1,12,20Z" />
+                            <path d="M8,11a1,1,0,1,0,1,1A1,1,0,0,0,8,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,12,11Zm4,0a1,1,0,1,0,1,1A1,1,0,0,0,16,11ZM12,2A10,10,0,0,0,2,12a9.89,9.89,0,0,0,2.26,6.33l-2,2a1,1,0,0,0-.21,1.09A1,1,0,0,0,3,22h9A10,10,0,0,0,12,2Zm0,18H5.41l.93-.93a1,1,0,0,0,.3-.71,1,1,0,0,0-.3-.7A8,8,0,1,1,12,20Z" />
                         </svg></a>
                 </div>
                 <div class="cub">
@@ -147,15 +140,13 @@
                             <title />
                             <g id="about">
                                 <path d="M16,16A7,7,0,1,0,9,9,7,7,0,0,0,16,16ZM16,4a5,5,0,1,1-5,5A5,5,0,0,1,16,4Z" />
-                                <path
-                                    d="M17,18H15A11,11,0,0,0,4,29a1,1,0,0,0,1,1H27a1,1,0,0,0,1-1A11,11,0,0,0,17,18ZM6.06,28A9,9,0,0,1,15,20h2a9,9,0,0,1,8.94,8Z" />
+                                <path d="M17,18H15A11,11,0,0,0,4,29a1,1,0,0,0,1,1H27a1,1,0,0,0,1-1A11,11,0,0,0,17,18ZM6.06,28A9,9,0,0,1,15,20h2a9,9,0,0,1,8.94,8Z" />
                             </g>
                         </svg>
                     </a>
                 </div>
                 <div class="cub">
-                    <a class="incub" href="#"><svg class="cole" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0
+                    <a class="incub" href="#"><svg class="cole" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0
                                                                             0 24
                                                                             24">
                             <path opacity=".3" d="M16.5
@@ -309,7 +300,8 @@
                 zone</div>
         </div>
         <div class="a1">
-            <img class="images_site/imga2" src="camera_2.png" alt="">
+            <video autoplay muted loop src="images_site/1234.mp4" >
+            </video>
             <div class="a4">
                 <div class="a3">Let
                     The
@@ -317,54 +309,137 @@
                     <br>Begin
                 </div>
                 <div class="a5">
-                    <button class="a6
-                                                                                    btn">Know
-                        More</button>
-                    <button class="a7
-                                                                                    btn">Buy</button>
-                </div>
-            </div>
-            <div class="video1">
-                <div class="video2">
-                    <iframe id="yt" width="560" height="315" src="https://www.youtube.com/embed/FYH9n37B7Yw?controls=0"
-                        title="YouTube
-                                                                                    video
-                                                                                    player" frameborder="0" allow="accelerometer;
-                                                                                    autoplay;
-                                                                                    clipboard-write;
-                                                                                    encrypted-media;
-                                                                                    gyroscope;
-                                                                                    picture-in-picture;
-                                                                                    web-share"
-                        allowfullscreen></iframe>
+                    <button class="a6 btn">Know More</button>
+                    <button class="a7 btn">Buy</button>
                 </div>
             </div>
         </div>
         <div class="chose">
             <div class="chose1">
-                <div class="games">Games</div><a href="#" class="more">More</a>
+                <div class="games">News</div><a href="#" class="more">More</a>
             </div>
-            <div class="chose3">
-                <div class="chose2">
-                    <img class="images_site/imginchose2" src="frame_35822.png" alt="">
-                    <div class="chose4">
-                        <div class="ecri1">COD
-                            Warzone
-                            Tournament
-                        </div>
-                        <div class="ecri2">
-                            <div class="ecri3">
-                                <div class="ecri4">Prize</div>
+
+            <div class="chose3">@foreach($product as $Product)
+                <div class="chose2"><a style="text-decoration: none;" href="#">
+                        <img class="imginchose2" src="Folder_img/{{$Product->photo_1}}" alt="">
+                        <div class="chose4">
+                            <div class="ecri1">{{$Product->game_name}}
+                            </div>
+                            <div class="roww">
+                                <div class="ecri2 text-white">
+                                    <span style="color: #AA1D66;">Price</span> <span class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
+                                </div>
+                                <div class="ecri2 text-white">
+                                    <span style="color: #AA1D66;">type</span> <span class="text-white"> {{$Product->type}} </span>
+                                </div>
+                                <div class="ecri2 text-white">
+                                    @if($Product->devices == 'all')
+                                    <span><i class="fa-solid fa-desktop"></i></span><span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                    @elseif($Product->devices == 'play')
+                                    <span><i class="fa-brands fa-playstation"></i></span>
+                                    @elseif($Product->devices == 'xbox')
+                                    <span><i class="fa-brands fa-xbox"></i></span>
+                                    @elseif($Product->devices == 'windows')
+                                    <span><i class="fa-brands fa-windows"></i></span>
+                                    @elseif($Product->devices == 'apple')
+                                    <span><i class="fa-brands fa-apple"></i></span>
+                                    @elseif($Product->devices == 'console')
+                                    <span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                    @elseif($Product->devices == 'pc')
+                                    <span><i class="fa-brands fa-desktop"></i></span>
+                                    @endif
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="chose2">
-                    <img class="images_site/imginchose2" src="frame_35822.png" alt="">
+                @endforeach
+            </div>
+        </div>
+
+        <div class="chose_games_2">
+            <div class="chose1">
+                <div class="games">Games</div><a href="#" class="more">More</a>
+            </div>
+
+            <div class="chose3">@foreach($product as $Product)
+                <div class="chose2"><a style="text-decoration: none;" href="#">
+                        <img class="imginchose2" src="Folder_img/{{$Product->photo_1}}" alt="">
+                        <div class="chose4">
+                            <div class="ecri1">{{$Product->game_name}}
+                            </div>
+                            <div class="roww">
+                                <div class="ecri2 text-white">
+                                    <span style="color: #AA1D66;">Price</span> <span class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
+                                </div>
+                                <div class="ecri2 text-white">
+                                    <span style="color: #AA1D66;">type</span> <span class="text-white"> {{$Product->type}} </span>
+                                </div>
+                                <div class="ecri2 text-white">
+                                    @if($Product->devices == 'all')
+                                    <span><i class="fa-solid fa-desktop"></i></span><span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                    @elseif($Product->devices == 'play')
+                                    <span><i class="fa-brands fa-playstation"></i></span>
+                                    @elseif($Product->devices == 'xbox')
+                                    <span><i class="fa-brands fa-xbox"></i></span>
+                                    @elseif($Product->devices == 'windows')
+                                    <span><i class="fa-brands fa-windows"></i></span>
+                                    @elseif($Product->devices == 'apple')
+                                    <span><i class="fa-brands fa-apple"></i></span>
+                                    @elseif($Product->devices == 'console')
+                                    <span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                    @elseif($Product->devices == 'pc')
+                                    <span><i class="fa-brands fa-desktop"></i></span>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-                <div class="chose2">
-                    <img class="images_site/imginchose2" src="frame_35822.png" alt="">
+                @endforeach
+            </div>
+        </div>
+
+        <div class="chose_games">
+            <div class="chose1">
+                <div class="games">Games</div><a href="#" class="more">More</a>
+            </div>
+
+            <div class="chose3">@foreach($product as $Product)
+                <div class="chose2"><a style="text-decoration: none;" href="#">
+                        <img class="imginchose2" src="Folder_img/{{$Product->photo_1}}" alt="">
+                        <div class="chose4">
+                            <div class="ecri1">{{$Product->game_name}}
+                            </div>
+                            <div class="roww">
+                                <div class="ecri2 text-white">
+                                    <span style="color: #AA1D66;">Price</span> <span class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
+                                </div>
+                                <div class="ecri2 text-white">
+                                    <span style="color: #AA1D66;">type</span> <span class="text-white"> {{$Product->type}} </span>
+                                </div>
+                                <div class="ecri2 text-white">
+                                    @if($Product->devices == 'all')
+                                    <span><i class="fa-solid fa-desktop"></i></span><span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                    @elseif($Product->devices == 'play')
+                                    <span><i class="fa-brands fa-playstation"></i></span>
+                                    @elseif($Product->devices == 'xbox')
+                                    <span><i class="fa-brands fa-xbox"></i></span>
+                                    @elseif($Product->devices == 'windows')
+                                    <span><i class="fa-brands fa-windows"></i></span>
+                                    @elseif($Product->devices == 'apple')
+                                    <span><i class="fa-brands fa-apple"></i></span>
+                                    @elseif($Product->devices == 'console')
+                                    <span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                    @elseif($Product->devices == 'pc')
+                                    <span><i class="fa-brands fa-desktop"></i></span>
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
+                @endforeach
             </div>
         </div>
     </div>
