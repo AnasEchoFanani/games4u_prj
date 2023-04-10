@@ -336,13 +336,20 @@
 
             <div class="chose3">@foreach($product as $Product)
                 <div class="chose2">
-                    <img class="imginchose2" src="images_site/frame_35822.png" alt="">
+                    <img class="imginchose2" src="Folder_img/{{$Product->photo_1}}" alt="">
                     <div class="chose4">
                         <div class="ecri1">{{$Product->game_name}}
+                        </div>
+                        <div class="roww">
+                        <div class="ecri2 text-white">
+                            <span style="color: #AA1D66;">Price</span> <span  class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
                         </div>
                         <div class="ecri2 text-white">
                             <span style="color: #AA1D66;">Price</span> <span  class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
                         </div>
+                        <div class="ecri2 text-white">
+                            <span style="color: #AA1D66;">Price</span> <span  class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
+                        </div></div>
                     </div>
                 </div>
                 @endforeach
