@@ -345,7 +345,7 @@
                             <span style="color: #AA1D66;">Price</span> <span  class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
                         </div>
                         <div class="ecri2 text-white">
-                            <span style="color: #AA1D66;">Price</span> <span  class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
+                            <span style="color: #AA1D66;">Price</span> <span  class="text-white"> ${{$Product->price_game}}  USD</span>
                         </div>
                         <div class="ecri2 text-white">
                             <span style="color: #AA1D66;">Price</span> <span  class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
