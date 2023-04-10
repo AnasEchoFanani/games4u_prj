@@ -331,26 +331,125 @@
         </div>
         <div class="chose">
             <div class="chose1">
-                <div class="games">Games</div><a href="#" class="more">More</a>
+                <div class="games">News</div><a href="#" class="more">More</a>
             </div>
 
             <div class="chose3">@foreach($product as $Product)
-                <div class="chose2">
+                <div class="chose2"><a style="text-decoration: none;" href="#">
                     <img class="imginchose2" src="Folder_img/{{$Product->photo_1}}" alt="">
                     <div class="chose4">
                         <div class="ecri1">{{$Product->game_name}}
                         </div>
                         <div class="roww">
-                        <div class="ecri2 text-white">
-                            <span style="color: #AA1D66;">Price</span> <span  class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
+                            <div class="ecri2 text-white">
+                                <span style="color: #AA1D66;">Price</span> <span class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
+                            </div>
+                            <div class="ecri2 text-white">
+                                <span style="color: #AA1D66;">type</span> <span class="text-white"> {{$Product->type}} </span>
+                            </div>
+                            <div class="ecri2 text-white">
+                                @if($Product->devices == 'all')
+                                <span><i class="fa-solid fa-desktop"></i></span><span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                @elseif($Product->devices == 'play')
+                                <span><i class="fa-brands fa-playstation"></i></span>
+                                @elseif($Product->devices == 'xbox')
+                                <span><i class="fa-brands fa-xbox"></i></span>
+                                @elseif($Product->devices == 'windows')
+                                <span><i class="fa-brands fa-windows"></i></span>
+                                @elseif($Product->devices == 'apple')
+                                <span><i class="fa-brands fa-apple"></i></span>
+                                @elseif($Product->devices == 'console')
+                                <span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                @elseif($Product->devices == 'pc')
+                                <span><i class="fa-brands fa-desktop"></i></span>
+                                @endif
+                            </div>
                         </div>
-                        <div class="ecri2 text-white">
-                            <span style="color: #AA1D66;">Price</span> <span  class="text-white"> ${{$Product->price_game}}  USD</span>
+                    </div></a>
+                </div>
+                @endforeach
+            </div>
+        </div>
+
+        <div class="chose_games_2">
+            <div class="chose1">
+                <div class="games">Games</div><a href="#" class="more">More</a>
+            </div>
+
+            <div class="chose3">@foreach($product as $Product)
+                <div class="chose2"><a style="text-decoration: none;" href="#">
+                    <img class="imginchose2" src="Folder_img/{{$Product->photo_1}}" alt="">
+                    <div class="chose4">
+                        <div class="ecri1">{{$Product->game_name}}
                         </div>
-                        <div class="ecri2 text-white">
-                            <span style="color: #AA1D66;">Price</span> <span  class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
-                        </div></div>
-                    </div>
+                        <div class="roww">
+                            <div class="ecri2 text-white">
+                                <span style="color: #AA1D66;">Price</span> <span class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
+                            </div>
+                            <div class="ecri2 text-white">
+                                <span style="color: #AA1D66;">type</span> <span class="text-white"> {{$Product->type}} </span>
+                            </div>
+                            <div class="ecri2 text-white">
+                                @if($Product->devices == 'all')
+                                <span><i class="fa-solid fa-desktop"></i></span><span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                @elseif($Product->devices == 'play')
+                                <span><i class="fa-brands fa-playstation"></i></span>
+                                @elseif($Product->devices == 'xbox')
+                                <span><i class="fa-brands fa-xbox"></i></span>
+                                @elseif($Product->devices == 'windows')
+                                <span><i class="fa-brands fa-windows"></i></span>
+                                @elseif($Product->devices == 'apple')
+                                <span><i class="fa-brands fa-apple"></i></span>
+                                @elseif($Product->devices == 'console')
+                                <span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                @elseif($Product->devices == 'pc')
+                                <span><i class="fa-brands fa-desktop"></i></span>
+                                @endif
+                            </div>
+                        </div>
+                    </div></a>
+                </div>
+                @endforeach
+            </div>
+        </div>
+
+        <div class="chose_games">
+            <div class="chose1">
+                <div class="games">Games</div><a href="#" class="more">More</a>
+            </div>
+
+            <div class="chose3">@foreach($product as $Product)
+                <div class="chose2"><a style="text-decoration: none;" href="#">
+                    <img class="imginchose2" src="Folder_img/{{$Product->photo_1}}" alt="">
+                    <div class="chose4">
+                        <div class="ecri1">{{$Product->game_name}}
+                        </div>
+                        <div class="roww">
+                            <div class="ecri2 text-white">
+                                <span style="color: #AA1D66;">Price</span> <span class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
+                            </div>
+                            <div class="ecri2 text-white">
+                                <span style="color: #AA1D66;">type</span> <span class="text-white"> {{$Product->type}} </span>
+                            </div>
+                            <div class="ecri2 text-white">
+                                @if($Product->devices == 'all')
+                                <span><i class="fa-solid fa-desktop"></i></span><span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                @elseif($Product->devices == 'play')
+                                <span><i class="fa-brands fa-playstation"></i></span>
+                                @elseif($Product->devices == 'xbox')
+                                <span><i class="fa-brands fa-xbox"></i></span>
+                                @elseif($Product->devices == 'windows')
+                                <span><i class="fa-brands fa-windows"></i></span>
+                                @elseif($Product->devices == 'apple')
+                                <span><i class="fa-brands fa-apple"></i></span>
+                                @elseif($Product->devices == 'console')
+                                <span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
+                                @elseif($Product->devices == 'pc')
+                                <span><i class="fa-brands fa-desktop"></i></span>
+                                @endif
+                            </div>
+                        </div>
+                    </div></a>
                 </div>
                 @endforeach
             </div>

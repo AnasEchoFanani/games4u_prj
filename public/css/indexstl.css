@@ -467,8 +467,30 @@ body {
     position: absolute;
     width: 1216px;
     height: 700px;
-    left: 152px;
+    left: 10%;
     top: 778px;
+}
+.chose_games {
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 1216px;
+    height: 700px;
+    left: 10%;
+    top: 115%;
+}
+.chose_games_2 {
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 1216px;
+    height: 700px;
+    left: 10%;
+    top: 165%;
 }
 .chose1 {
     display: flex;
@@ -651,9 +673,9 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   padding: 5%;
-  gap: 0px;
+  gap: 20%;
   width: 44%;
   height: 75%;
   font-weight: bold;
