@@ -341,9 +341,8 @@
                         <div class="ecri1">{{$Product->game_name}}
                         </div>
                         <div class="ecri2 text-white">
-                            Prize
+                            <span style="color: #AA1D66;">Price</span> <span  class="text-white"><i class="fa-solid fa-money-bill-1"></i> {{$Product->price_game}}</span>
                         </div>
-                        <div class="text-white">{{$Product->price_game}}</div>
                     </div>
                 </div>
                 @endforeach
