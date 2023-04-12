@@ -346,7 +346,7 @@
                                     @elseif($Product->devices == 'console')
                                     <span><i class="fa-brands fa-xbox"></i></span><span><i class="fa-brands fa-playstation"></i></span>
                                     @elseif($Product->devices == 'pc')
-                                    <span><i class="fa-brands fa-desktop"></i></span>
+                                    <span><i class="fa-solid fa-desktop"></i></span>
                                     @endif
                                 </div>
                             </div>
