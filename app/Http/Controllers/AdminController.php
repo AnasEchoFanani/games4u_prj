@@ -221,14 +221,14 @@ class AdminController extends Controller
                 unlink($file_path_video);
             }
         }
-        // delete existing photo_3 file if it exists
+        // delete existing photo_1 file if it exists
         if ($product->photo_1) {
             $file_path_photo_1 = public_path('Folder_img/' . $product->photo_1);
             if (file_exists($file_path_photo_1)) {
                 unlink($file_path_photo_1);
             }
         }
-        // delete existing photo_3 file if it exists
+        // delete existing photo_2 file if it exists
         if ($product->photo_2) {
             $file_path_2 = public_path('Folder_img/' . $product->photo_2);
             if (file_exists($file_path_2)) {

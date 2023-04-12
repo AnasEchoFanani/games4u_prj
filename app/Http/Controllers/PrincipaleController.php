@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class PrincipaleController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $product = product::orderBy('created_at', 'desc')->paginate(3);
         return view('Home.index', compact('product'));
     }
