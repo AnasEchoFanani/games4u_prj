@@ -21,7 +21,8 @@ class AdminController extends Controller
 
 
 
-    public function createGenre(){
+    public function createGenre()
+    {
         $genre = genre::all();
         return view('Admin.createGenre',compact('genre'));
     }
