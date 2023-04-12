@@ -1,5 +1,4 @@
 @extends('layouts.app')
-@section('title', 'Create Game')
 @section('style-active-add', 'border-bottom')
 @section('content')
 <div class="container mt-4">
@@ -7,7 +6,7 @@
         <div class="col-md-12">
         @foreach($product as $p)
             <form action="{{ route('admin.update' , $p->id)   }}" method="POST" enctype="multipart/form-data">
-                
+
                 @csrf
                 @method('PUT')
                 <div class="card p-4 bg-dark text-white border border-white">
@@ -19,7 +18,7 @@
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="DSproduit" class="form-label">Info Game <span class="text-danger">*</span></label>
-                            <textarea class="form-control" id="info_game" name="info_game" rows="4" cols="50" placeholder="info game" value="{{$p->info_game}}" required></textarea>
+                            <textarea class="form-control" id="info_game" name="info_game" rows="4" cols="50" placeholder="info game" required>{{$p->info_game}}</textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -30,7 +29,7 @@
                         <div class="col-md-3 mb-3">
                             <label for="QTproduit" class="form-label">Disponibiliter <span class="text-danger">*</span></label>
                             <select class="form-select" name="disponibiliter" id="disponibiliter" required>
-                                <option selected disabled value="">{{$p->disponibiliter}}</option>
+                                <option selected>{{$p->disponibiliter}}</option>
                                 <option>Oui</option>
                                 <option>Non</option>
                             </select>
@@ -68,7 +67,7 @@
                                     <label for="type" class="form-label">type</label>
                                     <input class="form-control" type="text" id="type" name="type" value="type" required>
                                 </div>
-                            
+
                         </div>
 
                     </div>
@@ -185,19 +184,22 @@
                                     <div class="col-md-4">
                                         <div class="mb-3">
                                             <label for="photo_1" class="form-label">Photo</label>
-                                            <input class="form-control" type="file" id="photo_1" name="photo_1" accept=".jpg,.jpeg,.png,.webp" required>
+                                            <input class="form-control" type="file" id="photo_1" name="photo_1" accept=".jpg,.jpeg,.png,.webp" required alt="Photo_1">
+                                            <img src="/Folder_img/{{$p->photo_1}}" width="100%" height="100%" style="border-radius: 0 0 10% 10%">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
                                             <label for="photo_2" class="form-label">Photo 1</label>
                                             <input class="form-control" type="file" id="photo_2" name="photo_2" accept=".jpg,.jpeg,.png,.webp">
+                                            <img src="/Folder_img/{{$p->photo_2}}" width="100%" height="100%" style="border-radius: 0 0 10% 10%" required alt="Photo_2">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
                                             <label for="photo_3" class="form-label">Photo 2</label>
                                             <input class="form-control" type="file" id="photo_3" name="photo_3" accept=".jpg,.jpeg,.png,.webp">
+                                            <img src="/Folder_img/{{$p->photo_3}}" width="100%" height="100%" style="border-radius: 0 0 10% 10%" required alt="Photo_3">
                                         </div>
                                     </div>
                                 </div>

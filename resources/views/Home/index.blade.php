@@ -79,12 +79,12 @@
 
     <div class="chose_games_2">
         <div class="chose1">
-            <div class="games">Games</div>
+            <div class="games">Action</div>
             <a href="#" class="more">More</a>
         </div>
 
         <div class="chose3">
-            @foreach($product as $Product)
+            @foreach($product_genre_action as $Product)
                 <div class="chose2"><a style="text-decoration: none;" href="#">
                         <img class="imginchose2" src="Folder_img/{{$Product->photo_1}}" alt="">
                         <div class="chose4">
@@ -129,11 +129,12 @@
 
     <div class="chose_games">
         <div class="chose1">
-            <div class="games">Games</div>
+            <div class="games">Sport</div>
             <a href="#" class="more">More</a>
         </div>
 
-        <div class="chose3">@foreach($product as $Product)
+        <div class="chose3">
+            @foreach($product_genre_sport as $Product)
                 <div class="chose2"><a style="text-decoration: none;" href="#">
                         <img class="imginchose2" src="Folder_img/{{$Product->photo_1}}" alt="">
                         <div class="chose4">
@@ -174,5 +175,8 @@
                 </div>
             @endforeach
         </div>
+    </div>
+    <div class="">
+
     </div>
 @endsection
