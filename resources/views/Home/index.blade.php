@@ -33,7 +33,8 @@
             <a href="#" class="more">More</a>
         </div>
 
-        <div class="chose3">@foreach($product as $Product)
+        <div class="chose3">
+            @foreach($product as $Product)
                 <div class="chose2"><a style="text-decoration: none;" href="#">
                         <img class="imginchose2" src="Folder_img/{{$Product->photo_1}}" alt="">
                         <div class="chose4">
@@ -82,7 +83,8 @@
             <a href="#" class="more">More</a>
         </div>
 
-        <div class="chose3">@foreach($product as $Product)
+        <div class="chose3">
+            @foreach($product as $Product)
                 <div class="chose2"><a style="text-decoration: none;" href="#">
                         <img class="imginchose2" src="Folder_img/{{$Product->photo_1}}" alt="">
                         <div class="chose4">
