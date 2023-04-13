@@ -176,7 +176,9 @@
             @endforeach
         </div>
     </div>
-    <div class="">
+    <div class="big_cube">
+        <div class="in_big_cube">
 
+        </div>
     </div>
 @endsection
