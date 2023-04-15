@@ -23,7 +23,7 @@
 <div class="container">
     <div class="nav1">
         <div class="col1">
-            <form>
+            <form >
                 <div class="input-group ">
                     <input type="text" class="form-control inpt" placeholder="Search">
                     <div class="input-group-btn search">
