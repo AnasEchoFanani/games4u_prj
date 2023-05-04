@@ -1,0 +1,23 @@
+:root{
+    --dark : #101010;
+    --white : #ffff;
+    --rose : #AA1D66;
+    --move : #2C00D7;
+    --bordercircle: 24px;
+}
+
+.navstyle{
+    background-color: var(--dark);
+}
+.navstyle a{
+    color: white;
+}
+.navstyle a:hover{
+    color: var(--rose);
+}
+.logo_size{
+    width: 4%;
+}
+.logo{
+    width: 100%;
+}

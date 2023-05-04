@@ -13,6 +13,7 @@
                             <table class="table table-striped table-hover table-bordered table-dark">
                                 <thead class="text-center ">
                                     <tr>
+                                        <th scope="col">Photo</th>
                                         <th scope="col">game_name</th>
                                         <th scope="col">price_game</th>
                                         <th scope="col">disponibiliter</th>
@@ -23,6 +24,8 @@
                                 <tbody class="text-center align-middle">
                                     @foreach($product as $produits)
                                     <tr>
+                                        <td style="height: 50%;width: 20%;"><img src="Folder_img/{{$produits->photo_1}}" alt="{{$produits->photo_1}}"
+                                                 height="100%" width="100%"></td>
                                         <td data-searchable="{{$produits->game_name}}">{{$produits->game_name}}</td>
                                         <td>{{$produits->price_game}} DH</td>
                                         <td>{{$produits->disponibiliter}}</td>
