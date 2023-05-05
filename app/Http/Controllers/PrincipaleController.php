@@ -14,4 +14,9 @@ class PrincipaleController extends Controller
         $product = product::orderBy('created_at', 'desc')->paginate(4);
         return view('Home.index', compact('product','product_genre_action','product_genre_sport'));
     }
+    public function afficher($id)
+    {
+        $product_id = product::findOrFail($id);
+        return view('Home.buy_produit',compact('product_id'));
+    }
 }

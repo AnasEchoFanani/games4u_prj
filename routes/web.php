@@ -46,7 +46,8 @@ Route::group(['prefix' => 'support'], function () {
 
 Route::group(['prefix' => '/'], function () {
     Route::get('/',[PrincipaleController::class , 'index']);
-});
+    Route::get('/{id}',[PrincipaleController::class, 'afficher'])->name('afficher');
+})->name('index');
 
 Route::get('/login' , function(){
     return view('login.login');
