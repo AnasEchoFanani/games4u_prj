@@ -64,88 +64,56 @@
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="images_site/homepage-new-slide2-1900x600.jpg" class="d-block w-100" alt="...">
+                            <img src="images_site/fortnite-black-adam-1900x600-62cd84a238e3.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="images_site/homepage-new-slide2-1900x600.jpg" class="d-block w-100" alt="...">
+                            <img src="images_site/fortnite-league-of-legends-jinx-1900x600-f555ed5b5bc0.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="images_site/homepage-new-slide2-1900x600.jpg" class="d-block w-100" alt="...">
+                            <img src="images_site/fortnite-rocket-league-octane-1900x600-6ed2bd9efc2f.jpg" class="d-block w-100" alt="...">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-4">
-                <div class="col-3">
+            <div class="row mt-4 p-1">
+                <div class="col-4">
+                    <h3>Top Games</h3>
+                </div>
+                <div class="col-4 text-end"><a href="#">more</a></div>
+            </div>
+            <div class="row mt-3">
+                @foreach($product as $topProduct)
+                <div class="col-2">
                     <div class="card">
-                        <div class="card-">iugb</div>
+                        <img src="Folder_img/{{$topProduct->photo_1}}" class="card-img-top image-game" alt="Photo_1">
+                        <div class="card-body">
+                            <h6 class="card-title">{{$topProduct->game_name}}</h6>
+                            <div class="row text-aligne">
+                                <div class="text-start col-6">
+                                    <a href="#" class="btn btn-buy"><i class='bx bx-cart-add'></i></a>
+                                </div>
+                                @if($topProduct->price_game>0)
+                                <div class="text-end col-6 price">{{$topProduct->price_game}} DH</div>
+                                @else
+                                <div class="text-end col-6 price">Free</div>
+                                @endif
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card-">uyg</div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card">
-                        <div class="card-">iug</div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
     <!--Container Main end-->
-    <footer class="bg-black text-center text-lg-start mt-auto">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Footer Content</h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
-                        cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Links</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#!" class="text-dark">
-                                Home</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">About</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Services</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-0">Links</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!" class="text-dark">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!" class="text-dark">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
+    <footer class="bg-black text-center text-lg-start mt-4">
+        <div class="row">
+            <div class="text-start col-6" style="background-color: rgba(0, 0, 0, 0.2);">Privacy Policy</div>
+            <div class="text-end col-6 " style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Made with ♥ by Anas and Ayman
             </div>
         </div>
 
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2023 Company Name: <a class="text-dark" href="#">Example.com</a>
-        </div>
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {

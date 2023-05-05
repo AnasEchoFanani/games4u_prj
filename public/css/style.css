@@ -24,7 +24,7 @@ body {
     background-color: black !important;
     color: white !important;
 }
-.black{
+.black {
     background-color: black !important;
     color: white !important;
 }
@@ -166,4 +166,22 @@ a {
     height: 100%;
     overflow: hidden;
     border-radius: 15px;
+}
+
+.card{
+    background-color: #101010 !important;
+}
+.card-title{
+    color: #ffff !important;
+    font-size: medium;
+}
+.btn-buy{
+    background-color: #aa1d66 !important;
+    color: white !important;
+}
+.btn-buy:hover{
+    background-color: #721545 !important;
+}
+.price{
+    color: white !important;
 }
