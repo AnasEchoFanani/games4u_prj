@@ -193,3 +193,6 @@ a {
 .price{
     color: white !important;
 }
+.radius{
+    border-radius: 15px;
+}

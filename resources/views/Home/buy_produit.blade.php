@@ -1,41 +1,75 @@
 @extends('Layouts.app_Principale')
 @section('content')
-<div id="carouselExampleCaptions" class="carousel slide">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="Folder_img/{{$product_id->photo_1}}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="Folder_img/{{$product_id->photo_1}}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="Folder_img/{{$product_id->photo_1}}" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>
-            </div>
+<div class="container-fluid mt-5 pt-5">
+    <div class="row">
+        <div class="col ms-3">
+            <h1>{{$product_id->game_name}}</h1>
+            <hr>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
+    <div class="row">
+        <div class="col-6">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <video src="images_site/1234.mp4" type="video/*" class="d-block w-100" alt="..." controls autoplay muted>
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Folder_img/1681142854.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Folder_img/1681142854.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-3 col-xs-2">
+            <div class="short-div">
+                <a type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-current="true" aria-label="Slide 1">
+                    <img class="d-block w-100 radius" src="Folder_img/1681142854.jpg" class="img-fluid" />
+                </a>
+            </div>
+            <div class="short-div">
+                <a type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-current="true" aria-label="Slide 1">
+                    <img class="d-block w-100 radius" src="Folder_img/1681142854.jpg" class="img-fluid" />
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-2 col-sm-3 col-xs-2">
+            <div class="short-div">
+                <a type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
+                    <video src="images_site/1234.mp4" type="video/*" class="d-block w-100 radius" alt="...">
+                    </video>
+                </a>
+            </div>
+            <div class="short-div">
+                <a type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-current="true" aria-label="Slide 1">
+                    <img class="d-block w-100 radius" src="Folder_img/1681142854.jpg" class="img-fluid" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="text-white">Description</h1>
+                    <hr class="text-white">
+                    <p class="card-text text-white">Revivez l'histoire épique des neuf films de 
+                    la saga Skywalker dans ce jeu incomparable. Avec
+                     plus de 300 personnages jouables, plus de 100 
+                     véhicules et 23 planètes à explorer, cette galaxie 
+                     lointaine, très lointaine, n'a jamais été aussi amusante
+                      ! Personnage Obi-Wan Kenobi classique inclus</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <h2>Buy This Game</h2>
+            <hr>
+        </div>
+    </div>
 </div>
+
 @endsection
