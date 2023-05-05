@@ -75,33 +75,39 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-4 p-1">
-                <div class="col-4">
-                    <h3>Top Games</h3>
+            <div class="row">
+                <div class="row mt-4 p-1 aligne-center">
+                    <div class="col-4">
+                        <h3>Top Games</h3>
+                    </div>
+                    <div class="col-4 text-end "><a class="more-link" href="#">more</a></div>
                 </div>
-                <div class="col-4 text-end"><a href="#">more</a></div>
-            </div>
-            <div class="row mt-3">
-                @foreach($product as $topProduct)
-                <div class="col-2">
-                    <div class="card">
-                        <img src="Folder_img/{{$topProduct->photo_1}}" class="card-img-top image-game" alt="Photo_1">
-                        <div class="card-body">
-                            <h6 class="card-title">{{$topProduct->game_name}}</h6>
-                            <div class="row text-aligne">
-                                <div class="text-start col-6">
-                                    <a href="#" class="btn btn-buy"><i class='bx bx-cart-add'></i></a>
+                <div class="row mt-3">
+                    @foreach($product as $topProduct)
+                    <div class="col-2">
+                        <div class="card">
+                            <img src="Folder_img/{{$topProduct->photo_1}}" class="card-img-top image-game" alt="Photo_1">
+                            <div class="card-body">
+                                <h6 class="card-title">{{$topProduct->game_name}}</h6>
+                                <div class="row text-aligne">
+                                    <div class="text-start col-6">
+                                        <a href="#" class="btn btn-buy"><i class='bx bx-cart-add'></i></a>
+                                    </div>
+                                    @if($topProduct->price_game>0)
+                                    <div class="text-end col-6 price">{{$topProduct->price_game}} DH</div>
+                                    @else
+                                    <div class="text-end col-6 price">Free</div>
+                                    @endif
                                 </div>
-                                @if($topProduct->price_game>0)
-                                <div class="text-end col-6 price">{{$topProduct->price_game}} DH</div>
-                                @else
-                                <div class="text-end col-6 price">Free</div>
-                                @endif
                             </div>
                         </div>
                     </div>
+                    @endforeach
+                    <div class="col-lg-4 col-md-2 col-sm-3 col-xs-2">
+                        <div class="short-div" style="background-color:green">vid 1</div>
+                        <div class="short-div" style="background-color:purple">vid 2</div>
+                    </div>
                 </div>
-                @endforeach
             </div>
         </div>
     </div>
@@ -110,7 +116,7 @@
         <div class="row">
             <div class="text-start col-6" style="background-color: rgba(0, 0, 0, 0.2);">Privacy Policy</div>
             <div class="text-end col-6 " style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2023 Made with ♥ by Anas and Ayman
+                © 2023 Made with ♥ by Anas
             </div>
         </div>
 

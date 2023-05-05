@@ -14,6 +14,14 @@
 ::after {
     box-sizing: border-box;
 }
+.more-link{
+    text-decoration: none !important;
+    color: #aa1d66 !important;
+}
+.more-link:hover{
+    text-decoration: underline !important;
+    color: #721545 !important;
+}
 body {
     position: relative;
     margin: var(--header-height) 0 0 0;
