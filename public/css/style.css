@@ -196,3 +196,15 @@ a {
 .radius{
     border-radius: 15px;
 }
+
+.btn-add-to-shop{
+    border-color: white !important;
+    color: white !important;
+}
+.btn-add-to-shop:hover{
+    background-color: #d2d2d338 !important;
+}
+
+.purple{
+    color: #aa1d66 !important;
+}
