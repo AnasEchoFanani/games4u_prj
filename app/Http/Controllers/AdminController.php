@@ -6,9 +6,8 @@ use App\Models\admin;
 use App\Models\Commande;
 use App\Models\genre;
 use App\Models\product;
-
-use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 
 class AdminController extends Controller
@@ -20,14 +19,14 @@ class AdminController extends Controller
     }
 
 
-
     public function createGenre()
     {
         $genre = genre::all();
-        return view('Admin.createGenre',compact('genre'));
+        return view('Admin.createGenre', compact('genre'));
     }
 
-    public function storeGenre(Request $request){
+    public function storeGenre(Request $request)
+    {
         $genre = new genre;
 
         $genre->genre = $request->genre;
@@ -44,23 +43,26 @@ class AdminController extends Controller
     }
 
 
-
     public function create()
     {
         $genre = genre::all();
         return view('Admin.create', compact('genre'));
     }
+
     public function show($id)
     {
-        $comande = Commande::select()->where('numcom',$id)->get();
-        return view('admin.details' , compact('comande' ) );
+        $comande = Commande::select()->where('numcom', $id)->get();
+        return view('admin.details', compact('comande'));
     }
-    public function commande(){
+
+    public function commande()
+    {
 
         $c = Commande::all();
         return view('Admin.commande', compact('c'));
 
     }
+
     public function store(Request $request)
     {
         $product = new product();
@@ -242,7 +244,6 @@ class AdminController extends Controller
                 unlink($file_path_3);
             }
         }
-
 
 
         $product->delete();

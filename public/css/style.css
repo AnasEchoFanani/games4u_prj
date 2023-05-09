@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
 :root {
     --header-height: 3rem;
     --nav-width: 68px;
@@ -9,19 +10,23 @@
     --normal-font-size: 1rem;
     --z-fixed: 100;
 }
+
 *,
 ::before,
 ::after {
     box-sizing: border-box;
 }
-.more-link{
+
+.more-link {
     text-decoration: none !important;
     color: #AC6CFD !important;
 }
-.more-link:hover{
+
+.more-link:hover {
     text-decoration: underline !important;
     color: #784ab4 !important;
 }
+
 body {
     position: relative;
     margin: var(--header-height) 0 0 0;
@@ -32,13 +37,16 @@ body {
     background-color: black !important;
     color: white !important;
 }
+
 .black {
     background-color: black !important;
     color: white !important;
 }
+
 a {
     text-decoration: none;
 }
+
 .header {
     width: 100%;
     height: var(--header-height);
@@ -53,11 +61,13 @@ a {
     z-index: var(--z-fixed);
     transition: 0.5s;
 }
+
 .header_toggle {
     color: var(--first-color-light);
     font-size: 1.5rem;
     cursor: pointer;
 }
+
 .header_img {
     width: 35px;
     height: 35px;
@@ -66,9 +76,11 @@ a {
     border-radius: 50%;
     overflow: hidden;
 }
+
 .header_img img {
     width: 40px;
 }
+
 .l-navbar {
     position: fixed;
     top: 0;
@@ -80,6 +92,7 @@ a {
     transition: 0.5s;
     z-index: var(--z-fixed);
 }
+
 .nav {
     height: 100%;
     display: flex;
@@ -87,6 +100,7 @@ a {
     justify-content: space-between;
     overflow: hidden;
 }
+
 .nav_logo,
 .nav_link {
     display: grid;
@@ -96,39 +110,49 @@ a {
     padding: 0.5rem 0 0.5rem 1.5rem;
     text-decoration: none;
 }
+
 .nav_logo {
     margin-bottom: 2rem;
     padding-left: 4%;
 }
+
 .nav_logo-icon {
     font-size: 1.25rem;
     color: var(--white-color);
 }
+
 .nav_logo-name {
     color: var(--white-color);
     font-weight: 700;
 }
+
 .nav_link {
     position: relative;
     color: var(--first-color-light);
     margin-bottom: 1.5rem;
     transition: 0.3s;
 }
+
 .nav_link:hover {
     color: var(--white-color);
 }
+
 .nav_icon {
     font-size: 1.25rem;
 }
+
 .show {
     left: 0;
 }
+
 .body-pd {
     padding-left: calc(var(--nav-width) + 1rem);
 }
+
 .active {
     color: var(--white-color);
 }
+
 .nav_link.active::before {
     content: "";
     position: absolute;
@@ -141,33 +165,41 @@ a {
 .height-100 {
     height: 100vh;
 }
+
 @media screen and (min-width: 768px) {
     body {
         margin: calc(var(--header-height) + 4rem) 0 0 0;
         padding-left: calc(var(--nav-width) + 2rem);
     }
+
     .header {
         height: calc(var(--header-height) + 1rem);
         padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
     }
+
     .header_img {
         width: 40px;
         height: 40px;
     }
+
     .header_img img {
         width: 45px;
     }
+
     .l-navbar {
         left: 0;
         padding: 1rem 1rem 0 0;
     }
+
     .show {
         width: calc(var(--nav-width) + 156px);
     }
+
     .body-pd {
         padding-left: calc(var(--nav-width) + 188px);
     }
 }
+
 .carousel-inner {
     position: relative;
     width: 100%;
@@ -176,35 +208,41 @@ a {
     border-radius: 15px;
 }
 
-.card{
+.card {
     background-color: #101010 !important;
 }
-.card-title{
+
+.card-title {
     color: #ffff !important;
     font-size: medium;
 }
-.btn-buy{
+
+.btn-buy {
     background-color: #AC6CFD !important;
     color: white !important;
 }
-.btn-buy:hover{
+
+.btn-buy:hover {
     background-color: #784ab4 !important;
 }
-.price{
+
+.price {
     color: white !important;
 }
-.radius{
+
+.radius {
     border-radius: 15px;
 }
 
-.btn-add-to-shop{
+.btn-add-to-shop {
     border-color: white !important;
     color: white !important;
 }
-.btn-add-to-shop:hover{
+
+.btn-add-to-shop:hover {
     background-color: #d2d2d338 !important;
 }
 
-.purple{
+.purple {
     color: #AC6CFD !important;
 }

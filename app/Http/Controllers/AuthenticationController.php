@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
 use App\Models\user;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -20,6 +18,7 @@ class AuthenticationController extends Controller
     {
         return view('Authentication.register');
     }
+
     public function store_register(Request $request)
     {
         $First_Name = $request->First_Name;

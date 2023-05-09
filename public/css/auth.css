@@ -1,25 +1,31 @@
-.card{
+.card {
     background-color: #101010 !important;
 }
-.card-title{
+
+.card-title {
     color: #ffff !important;
     font-size: medium;
 }
-.btn-buy{
+
+.btn-buy {
     background-color: #AC6CFD !important;
     color: white !important;
 }
-.btn-buy:hover{
+
+.btn-buy:hover {
     background-color: #784ab4 !important;
 }
-.more-link{
+
+.more-link {
     text-decoration: none !important;
     color: #AC6CFD !important;
 }
-.more-link:hover{
+
+.more-link:hover {
     text-decoration: underline !important;
     color: #784ab4 !important;
 }
-.red{
+
+.red {
     color: #861616;
 }

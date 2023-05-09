@@ -11,8 +11,8 @@ Games4U is a web application that allows users to browse and buy games.
 
 ## About
 
-Games4U is a web application built using the Laravel framework and Vue.js. It provides users with a wide selection of online games that can be played directly in the browser.
-
+Games4U is a web application built using the Laravel framework and Vue.js. It provides users with a wide selection of
+online games that can be played directly in the browser.
 
 ## Installation
 
@@ -35,7 +35,6 @@ To use Games4U, follow these steps:
 1. Open a web browser and navigate to `http://localhost:8000`
 2. Browse the selection of games by category or search for specific titles
 3. Create an account to save your favorite games
-
 
 ## License
 
