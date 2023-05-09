@@ -1,0 +1,31 @@
+.card {
+    background-color: #101010 !important;
+}
+
+.card-title {
+    color: #ffff !important;
+    font-size: medium;
+}
+
+.btn-buy {
+    background-color: #AC6CFD !important;
+    color: white !important;
+}
+
+.btn-buy:hover {
+    background-color: #784ab4 !important;
+}
+
+.more-link {
+    text-decoration: none !important;
+    color: #AC6CFD !important;
+}
+
+.more-link:hover {
+    text-decoration: underline !important;
+    color: #784ab4 !important;
+}
+
+.red {
+    color: #861616;
+}
