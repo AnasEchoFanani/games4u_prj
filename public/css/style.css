@@ -3,7 +3,7 @@
     --header-height: 3rem;
     --nav-width: 68px;
     --first-color: #101010;
-    --first-color-light: #aa1d66;
+    --first-color-light: #AC6CFD;
     --white-color: #f7f6fb;
     --body-font: "Nunito", sans-serif;
     --normal-font-size: 1rem;
@@ -16,11 +16,11 @@
 }
 .more-link{
     text-decoration: none !important;
-    color: #aa1d66 !important;
+    color: #AC6CFD !important;
 }
 .more-link:hover{
     text-decoration: underline !important;
-    color: #721545 !important;
+    color: #784ab4 !important;
 }
 body {
     position: relative;
@@ -184,11 +184,11 @@ a {
     font-size: medium;
 }
 .btn-buy{
-    background-color: #aa1d66 !important;
+    background-color: #AC6CFD !important;
     color: white !important;
 }
 .btn-buy:hover{
-    background-color: #721545 !important;
+    background-color: #784ab4 !important;
 }
 .price{
     color: white !important;
@@ -206,5 +206,5 @@ a {
 }
 
 .purple{
-    color: #aa1d66 !important;
+    color: #AC6CFD !important;
 }

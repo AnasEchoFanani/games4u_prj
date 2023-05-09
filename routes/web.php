@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\PrincipaleController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,11 +27,15 @@ Route::get('/createGenre',[AdminController::class, 'createGenre'])->name('create
 Route::post('/storeGenre',[AdminController::class , 'storeGenre'])->name('storeGenre');
 Route::delete('/destroygenre/{id}', [AdminController::class , 'destroyGenre'])->name('destroyGenre');
 
-//User__Route___________________________________________________________________________________________________
+//authentication__Route___________________________________________________________________________________________________
 
-Route::group(['prefix' => 'user'], function () {
-    //
-});
+Route::group(['prefix' => 'authentication', 'middleware' => ['web']], function () {
+    Route::get('/register',[AuthenticationController::class,'register']);
+    Route::post('/store_register',[AuthenticationController::class,'store_register']);
+    Route::get('/login',[AuthenticationController::class,'login']);
+    Route::post('/login_go',[AuthenticationController::class,'login_go']);
+    Route::get('/logout',[AuthenticationController::class,'logout']);
+})->name('authentication');
 
 
 //Support__Route_________________________________________________________________________________________________
