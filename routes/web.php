@@ -40,7 +40,9 @@ Route::group(['prefix' => 'authentication', 'middleware' => ['web']], function (
 //Support__Route_________________________________________________________________________________________________
 
 Route::group(['prefix' => 'support'], function () {
-    //
+    Route::get('/', function () {
+        return view('Support.index');
+    });
 });
 
 
@@ -54,4 +56,7 @@ Route::group(['prefix' => '/'], function () {
 
 Route::get('/login', function () {
     return view('login.login');
+});
+Route::get('/support', function () {
+    return view('Support.index');
 });
