@@ -42,7 +42,9 @@ Route::group(['prefix' => 'authentication', 'middleware' => ['web']], function (
 
 Route::group(['prefix' => 'support'], function () {
     Route::get('/' , [SupportController::class , 'index'] );
-    Route::get('/show-msg/{id}' , [SupportController::class , 'show_msg'] );
+    Route::get('/show-msg/{id}' , [SupportController::class , 'repp'] );
+    
+
 });
 
 
