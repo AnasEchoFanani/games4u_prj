@@ -31,7 +31,7 @@
         </a>
     </div>
     <div class="header_img">
-        <img src="https://i.imgur.com/hczKIze.jpg" alt="">
+        <div class="text-white">anas fanani</div>
     </div>
 </header>
 <div class="l-navbar" id="nav-bar">
