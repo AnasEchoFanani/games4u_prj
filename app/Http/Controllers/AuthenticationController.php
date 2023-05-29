@@ -67,13 +67,9 @@ class AuthenticationController extends Controller
             return back()->with('email_error', 'Email or Password incorrect');
         }
 
-        // Update the user_id in the session
         session(['user_id' => $user->id]);
-
-        // Update the user_id in the session table
-        DB::table('sessions')
-            ->where('id', session()->getId())
-            ->update(['user_id' => $user->id]);
+        session(['first_name' => $user->first_name]);
+        session(['last_name' => $user->last_name]);
 
         return redirect('/')->with('email_success', 'Email correct');
     }

@@ -241,3 +241,7 @@ a {
 .purple {
     color: #AC6CFD !important;
 }
+.search{
+    flex: 0 0 auto;
+    width: 50% !important;
+}

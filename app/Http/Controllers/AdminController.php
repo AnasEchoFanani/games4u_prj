@@ -240,6 +240,7 @@ class AdminController extends Controller
     public function destroy($id)
     {
         $product = product::findOrFail($id);
+        
         if ($product->video) {
             $file_path_video = public_path('Folder_img/' . $product->video);
             if (file_exists($file_path_video)) {
