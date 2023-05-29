@@ -17,6 +17,7 @@ class PrincipaleController extends Controller
     public function afficher($id)
     {
         $product_id = product::findOrFail($id);
+        $user = 
         $same = product::where('genre', $product_id->genre)->inRandomOrder()->paginate(6);
         return view('Home.buy_produit', compact('product_id', 'same'));
     }

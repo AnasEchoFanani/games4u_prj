@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\PrincipaleController;
+use App\Http\Controllers\SupportController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -40,7 +41,10 @@ Route::group(['prefix' => 'authentication', 'middleware' => ['web']], function (
 //Support__Route_________________________________________________________________________________________________
 
 Route::group(['prefix' => 'support'], function () {
-    //
+    Route::get('/' , [SupportController::class , 'index'] );
+    Route::get('/show-msg/{id}' , [SupportController::class , 'repp'] );
+    
+
 });
 
 
@@ -55,3 +59,4 @@ Route::group(['prefix' => '/'], function () {
 Route::get('/login', function () {
     return view('login.login');
 });
+
