@@ -97,11 +97,19 @@ class AdminController extends Controller
 
         if ($request->hasFile('photo_3')) {
             $file_extension_3 = $request->photo_3->getClientOriginalExtension();
-            sleep(0.4);
+            sleep(0.5);
             $file_name_3 = time() . '.' . $file_extension_3;
             $path = 'Folder_img';
             $photoo = $request->photo_3->move($path, $file_name_3);
             $product->photo_3 = $file_name_3;
+        }
+        if ($request->hasFile('photo_4')) {
+            $file_extension_4 = $request->photo_4->getClientOriginalExtension();
+            sleep(1);
+            $file_name_4 = time() . '.' . $file_extension_4;
+            $path = 'Folder_img';
+            $photoo = $request->photo_4->move($path, $file_name_4);
+            $product->photo_4 = $file_name_4;
         }
 
 
@@ -120,7 +128,6 @@ class AdminController extends Controller
         $product->Mémoire_vive_min = $request->Mémoire_vive_min;
         $product->Graphiques_min = $request->Graphiques_min;
         $product->DirectX_min = $request->DirectX_min;
-        $product->Réseau_min = $request->Réseau_min;
         $product->Espace_disque_min = $request->Espace_disque_min;
 
         $product->Système_dexploitation_max = $request->Système_dexploitation_max;
@@ -128,7 +135,6 @@ class AdminController extends Controller
         $product->Mémoire_vive_max = $request->Mémoire_vive_max;
         $product->Graphiques_max = $request->Graphiques_max;
         $product->DirectX_max = $request->DirectX_max;
-        $product->Réseau_max = $request->Réseau_max;
         $product->Espace_disque_max = $request->Espace_disque_max;
 
         $product->save();
@@ -154,6 +160,8 @@ class AdminController extends Controller
             $path = 'Folder_img';
             $request->video->move($path, $file_name_video);
             $product->video = $file_name_video;
+        } else {
+            $product->video = $product->video;
         }
 
         if ($request->hasFile('photo_1')) {
@@ -163,6 +171,8 @@ class AdminController extends Controller
             $path = 'Folder_img';
             $request->photo_1->move($path, $file_name_1);
             $product->photo_1 = $file_name_1;
+        } else {
+            $product->photo_1 = $product->photo_1;
         }
 
         if ($request->hasFile('photo_2')) {
@@ -172,15 +182,30 @@ class AdminController extends Controller
             $path = 'Folder_img';
             $request->photo_2->move($path, $file_name_2);
             $product->photo_2 = $file_name_2;
+        } else {
+            $product->photo_2 = $product->photo_2;
         }
 
         if ($request->hasFile('photo_3')) {
             $file_extension_3 = $request->photo_3->getClientOriginalExtension();
-            sleep(0.4);
+            sleep(0.5);
             $file_name_3 = time() . '.' . $file_extension_3;
             $path = 'Folder_img';
             $photoo = $request->photo_3->move($path, $file_name_3);
             $product->photo_3 = $file_name_3;
+        } else {
+            $product->photo_3 = $product->photo_3;
+        }
+
+        if ($request->hasFile('photo_4')) {
+            $file_extension_4 = $request->photo_4->getClientOriginalExtension();
+            sleep(1);
+            $file_name_4 = time() . '.' . $file_extension_4;
+            $path = 'Folder_img';
+            $photoo = $request->photo_4->move($path, $file_name_4);
+            $product->photo_4 = $file_name_4;
+        } else {
+            $product->photo_4 = $product->photo_4;
         }
 
 
@@ -199,7 +224,6 @@ class AdminController extends Controller
         $product->Mémoire_vive_min = $request->Mémoire_vive_min;
         $product->Graphiques_min = $request->Graphiques_min;
         $product->DirectX_min = $request->DirectX_min;
-        $product->Réseau_min = $request->Réseau_min;
         $product->Espace_disque_min = $request->Espace_disque_min;
 
         $product->Système_dexploitation_max = $request->Système_dexploitation_max;
@@ -207,7 +231,6 @@ class AdminController extends Controller
         $product->Mémoire_vive_max = $request->Mémoire_vive_max;
         $product->Graphiques_max = $request->Graphiques_max;
         $product->DirectX_max = $request->DirectX_max;
-        $product->Réseau_max = $request->Réseau_max;
         $product->Espace_disque_max = $request->Espace_disque_max;
 
         $product->save();
@@ -217,6 +240,7 @@ class AdminController extends Controller
     public function destroy($id)
     {
         $product = product::findOrFail($id);
+        
         if ($product->video) {
             $file_path_video = public_path('Folder_img/' . $product->video);
             if (file_exists($file_path_video)) {
@@ -240,6 +264,12 @@ class AdminController extends Controller
         // delete existing photo_3 file if it exists
         if ($product->photo_3) {
             $file_path_3 = public_path('Folder_img/' . $product->photo_3);
+            if (file_exists($file_path_3)) {
+                unlink($file_path_3);
+            }
+        }
+        if ($product->photo_4) {
+            $file_path_3 = public_path('Folder_img/' . $product->photo_4);
             if (file_exists($file_path_3)) {
                 unlink($file_path_3);
             }

@@ -17,10 +17,13 @@
                             </video>
                         </div>
                         <div class="carousel-item">
-                            <img src="Folder_img/1681142854.jpg" class="d-block w-100" alt="...">
+                            <img src="Folder_img/{{$product_id->photo_2}}" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="Folder_img/1681142854.jpg" class="d-block w-100" alt="...">
+                            <img src="Folder_img/{{$product_id->photo_3}}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Folder_img/{{$product_id->photo_4}}" class="d-block w-100" alt="...">
                         </div>
                     </div>
                 </div>
@@ -29,15 +32,16 @@
                 <div class="short-div">
                     <a type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-current="true"
                        aria-label="Slide 1">
-                        <img class="d-block w-100 radius" src="Folder_img/1681142854.jpg" class="img-fluid"/>
+                        <img class="d-block w-100 radius" src="Folder_img/{{$product_id->photo_2}}" class="img-fluid"/>
                     </a>
                 </div>
                 <div class="short-div">
                     <a type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-current="true"
                        aria-label="Slide 1">
-                        <img class="d-block w-100 radius" src="Folder_img/1681142854.jpg" class="img-fluid"/>
+                        <img class="d-block w-100 radius" src="Folder_img/{{$product_id->photo_3}}" class="img-fluid"/>
                     </a>
                 </div>
+
             </div>
             <div class="col-lg-3 col-md-2 col-sm-3 col-xs-2">
                 <div class="short-div">
@@ -48,9 +52,9 @@
                     </a>
                 </div>
                 <div class="short-div">
-                    <a type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-current="true"
+                    <a type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-current="true"
                        aria-label="Slide 1">
-                        <img class="d-block w-100 radius" src="Folder_img/1681142854.jpg" class="img-fluid"/>
+                        <img class="d-block w-100 radius" src="Folder_img/{{$product_id->photo_4}}" class="img-fluid"/>
                     </a>
                 </div>
             </div>

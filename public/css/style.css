@@ -11,11 +11,6 @@
     --z-fixed: 100;
 }
 
-*,
-::before,
-::after {
-    box-sizing: border-box;
-}
 
 .more-link {
     text-decoration: none !important;
@@ -245,4 +240,8 @@ a {
 
 .purple {
     color: #AC6CFD !important;
+}
+.search{
+    flex: 0 0 auto;
+    width: 50% !important;
 }

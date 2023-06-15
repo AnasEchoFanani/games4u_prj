@@ -134,13 +134,6 @@
                                                 </div>
                                                 <div>
                                                     <div class="mb-3">
-                                                        <label for="Réseau_min" class="form-label">Réseau_min</label>
-                                                        <input class="form-control" type="text" id="Réseau_min"
-                                                               name="Réseau_min" value="{{$p->Réseau_min}}" required>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div class="mb-3">
                                                         <label for="Espace_disque_min" class="form-label">Espace_disque_min</label>
                                                         <input class="form-control" type="text" id="Espace_disque_min"
                                                                name="Espace_disque_min"
@@ -199,13 +192,6 @@
                                                 </div>
                                                 <div>
                                                     <div class="mb-3">
-                                                        <label for="Réseau_max" class="form-label">Réseau_max</label>
-                                                        <input class="form-control" type="text" id="Réseau_max"
-                                                               name="Réseau_max" value="{{$p->Réseau_max}}" required>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <div class="mb-3">
                                                         <label for="Espace_disque_max" class="form-label">Espace_disque_max</label>
                                                         <input class="form-control" type="text" id="Espace_disque_max"
                                                                name="Espace_disque_max"
@@ -224,28 +210,37 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="mb-3">
-                                                    <label for="photo_1" class="form-label">Photo</label>
+                                                    <label for="photo_1" class="form-label">Photo 1</label>
                                                     <input class="form-control" type="file" id="photo_1" name="photo_1"
-                                                           accept=".jpg,.jpeg,.png,.webp" required alt="Photo_1">
+                                                           accept="image/*" alt="Photo_1">
                                                     <img src="/Folder_img/{{$p->photo_1}}" width="100%" height="100%"
                                                          style="border-radius: 0 0 10% 10%">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="mb-3">
-                                                    <label for="photo_2" class="form-label">Photo 1</label>
+                                                    <label for="photo_2" class="form-label">Photo 2</label>
                                                     <input class="form-control" type="file" id="photo_2" name="photo_2"
-                                                           accept=".jpg,.jpeg,.png,.webp">
+                                                           accept="image/*">
                                                     <img src="/Folder_img/{{$p->photo_2}}" width="100%" height="100%"
                                                          style="border-radius: 0 0 10% 10%" required alt="Photo_2">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="mb-3">
-                                                    <label for="photo_3" class="form-label">Photo 2</label>
+                                                    <label for="photo_3" class="form-label">Photo 3</label>
                                                     <input class="form-control" type="file" id="photo_3" name="photo_3"
-                                                           accept=".jpg,.jpeg,.png,.webp">
+                                                           accept="image/*">
                                                     <img src="/Folder_img/{{$p->photo_3}}" width="100%" height="100%"
+                                                         style="border-radius: 0 0 10% 10%" required alt="Photo_3">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="mb-3">
+                                                    <label for="photo_3" class="form-label">Photo 4</label>
+                                                    <input class="form-control" type="file" id="photo_4" name="photo_4"
+                                                           accept="image/*">
+                                                    <img src="/Folder_img/{{$p->photo_4}}" width="100%" height="100%"
                                                          style="border-radius: 0 0 10% 10%" required alt="Photo_3">
                                                 </div>
                                             </div>

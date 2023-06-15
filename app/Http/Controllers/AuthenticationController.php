@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\user;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 
 
 class AuthenticationController extends Controller
@@ -21,22 +23,26 @@ class AuthenticationController extends Controller
 
     public function store_register(Request $request)
     {
-        $First_Name = $request->First_Name;
-        $Email = $request->Email;
-        $Password = $request->Password;
-        $Last_Name = $request->Last_Name;
-        $Phone = $request->Phone;
+        $request->validate([
+            'First_Name' => 'required',
+            'Email' => 'required|email',
+            'Password' => 'required',
+            'Last_Name' => 'required',
+            'Phone' => 'required',
+        ]);
 
-        $reg = user::where('email', $Email)->first();
-        if ($reg) {
+        $email = $request->Email;
+        $existingUser = User::where('email', $email)->first();
+
+        if ($existingUser) {
             return redirect()->away('/authentication/register')->with('email_error', 'Email already exists');
         } else {
-            $user = new user;
-            $user->first_name = $First_Name;
-            $user->email = $Email;
-            $user->password = Hash::make($Password);
-            $user->last_name = $Last_Name;
-            $user->phone = $Phone;
+            $user = new User;
+            $user->first_name = $request->First_Name;
+            $user->email = $email;
+            $user->password = Hash::make($request->Password);
+            $user->last_name = $request->Last_Name;
+            $user->phone = $request->Phone;
             $user->save();
 
             return redirect()->away('/');
@@ -62,13 +68,15 @@ class AuthenticationController extends Controller
         }
 
         session(['user_id' => $user->id]);
+        session(['first_name' => $user->first_name]);
+        session(['last_name' => $user->last_name]);
 
         return redirect('/')->with('email_success', 'Email correct');
     }
 
     public function logout()
     {
-        session()->forget('user_id');
+        Session::forget('user_id');
 
         return redirect('/authentication/login');
     }

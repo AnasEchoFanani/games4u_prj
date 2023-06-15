@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->String('photo_1')->nullable();
             $table->String('photo_2')->nullable();
             $table->String('photo_3')->nullable();
+            $table->String('photo_4')->nullable();
             $table->String('price_game')->nullable();
             $table->String('disponibiliter')->nullable();
             $table->String('date')->nullable();
@@ -29,7 +30,6 @@ return new class extends Migration {
             $table->String('Mémoire_vive_min')->nullable();
             $table->String('Graphiques_min')->nullable();
             $table->String('DirectX_min')->nullable();
-            $table->String('Réseau_min')->nullable();
             $table->String('Espace_disque_min')->nullable();
 
 
@@ -38,7 +38,6 @@ return new class extends Migration {
             $table->String('Mémoire_vive_max')->nullable();
             $table->String('Graphiques_max')->nullable();
             $table->String('DirectX_max')->nullable();
-            $table->String('Réseau_max')->nullable();
             $table->String('Espace_disque_max')->nullable();
 
             $table->String('devices')->nullable();
