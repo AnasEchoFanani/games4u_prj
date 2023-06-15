@@ -20,12 +20,15 @@ class SupportController extends Controller
 
     public function repp($id)
     {
-        $chats = chat::join('users', 'users.id', '=', 'chats.id_user')->where("email",$id)->get();
-                  
-            
+        $chats = chat::join('users', 'users.id', '=', 'chats.id_user')->where("email",$id)->orderBy('chats.created_at', 'desc')->get();
+
+        
+        
         return view('Support.show_msg', compact('chats'));
     }
-    
+    public function ret(){
+        
+    }
 
     
 
