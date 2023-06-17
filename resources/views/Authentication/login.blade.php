@@ -61,15 +61,6 @@
                                 </div>
                             </div>
                             <div class="row mt-4">
-                                <div class="form-check col d-flex justify-content-center">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                                           require>&nbsp;
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        I agree with the terms of use
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
                                 <div class="col d-grid gap-2 col-4 mx-auto">
                                     <button class="btn btn-buy btn-lg" id="submit_s" type="submit">Sign In</button>
                                 </div>

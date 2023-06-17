@@ -8,22 +8,21 @@
     <title>Games4u</title>
     <link rel="icon" href="images_site/frame_37612.png" type="image/icon type">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </head>
 
-<body id="body-pd">
+<body id="body-pd" class="d-flex flex-column min-vh-100">
     <header class="header" id="header">
         <div class="header_toggle "><i class='bx bx-menu' id="header-toggle"></i>
             <a class="navbar-brand ms-1 " href="#">
             </a>
         </div>
-        @if(Session::has('user_id'))
+
         <div class="col-6">
             <div class="input-group col-4">
                 <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -32,18 +31,14 @@
                 </div>
             </div>
         </div>
-
+        @if(Session::has('user_id'))
         <div class="header_img">
             <div class="text-white">anas fanani</div>
         </div>
         @else
-        <div class="col d-flex justify-content-center">
-            <div class="input-group  search">
-                <input type="text" class="form-control bg-dark text-white" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button class="btn bg-dark border-white text-white" type="button">Button</button>
-                </div>
-            </div>
+        <div>
+            <a href="/authentication/login" class="btn text-end btn-add-to-shop">Login</a>
+            <a href="/authentication/register" class="btn text-end btn-buy">Register</a>
         </div>
         @endif
 
@@ -51,15 +46,15 @@
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div><a href="/" class="nav_logo">
-                    <img src="images_site/frame_37612.png" class="logo_size" alt="hero_2" style="width: 15%;"></a>
+                    <img src="/images_site/frame_37612.png" class="logo_size" alt="hero_2" style="width: 15%;"></a>
                 <div class="nav_list">
-                    <a href="/" class="nav_link active">
+                    <a href="/" class="nav_link @yield('home')">
                         <i class='bx bx-home nav_icon'></i>
                         <span class="nav_name">Home</span> </a>
-                    <a href="#" class="nav_link">
+                    <a href="#" class="nav_link @yield('support')">
                         <i class='bx bx-message-square-detail nav_icon'></i>
                         <span class="nav_name">Messages</span></a>
-                    <a href="#" class="nav_link">
+                    <a href="/panier/afficher" class="nav_link @yield('panier')">
                         <i class='bx bx-basket nav_icon'></i>
                         <span class="nav_name">Basket</span> </a>
                     <a href="#" class="nav_link">
@@ -70,13 +65,15 @@
                         <span class="nav_name">Stats</span> </a>
                 </div>
             </div>
+            @if(Session::has('user_id'))
             <a href="/authentication/logout" class="nav_link">
                 <i class='bx bx-log-out nav_icon'></i>
                 <span class="nav_name">SignOut</span> </a>
+                @endif
         </nav>
     </div>
     @yield('content')
-    <footer class="bg-black text-center text-lg-start mt-4">
+    <footer class="bg-black text-center text-lg-start mt-4 mt-auto">
         <div class="row">
             <div class="text-start col-6" style="background-color: rgba(0, 0, 0, 0.2);">Privacy Policy</div>
             <div class="text-end col-6 " style="background-color: rgba(0, 0, 0, 0.2);">

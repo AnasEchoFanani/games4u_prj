@@ -53,8 +53,11 @@ Route::group(['prefix' => 'support'], function () {
 
 Route::group(['prefix' => '/'], function () {
     Route::get('/', [PrincipaleController::class, 'index']);
-    Route::get('/{id}', [PrincipaleController::class, 'afficher'])->name('afficher');
-})->name('index');
+    Route::get('/{id}', [PrincipaleController::class, 'afficher']);
+    Route::post('/panier/{id}', [PrincipaleController::class, 'panier']);
+    Route::get('/panier/afficher', [PrincipaleController::class, 'afficher_pagnier']);
+    Route::delete('/panier/delete/{id}',[PrincipaleController::class,'delete_panier']);
+});
 
 Route::get('/login', function () {
     return view('login.login');
