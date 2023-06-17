@@ -1,4 +1,5 @@
 @extends('Layouts.app_Principale')
+@section('home','active')
 @section('content')
     <div class="black">
         <div class="container-fluid mt-5 pt-5">
