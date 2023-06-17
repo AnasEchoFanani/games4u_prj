@@ -27,8 +27,23 @@ class SupportController extends Controller
         return view('Support.show_msg', compact('chats'));
     }
     public function ret(){
+
         
     }
+    public function repond($id,Request $request){
+        $re = chat::select()->where('id',$id)->first();
+        $re->returnMsg=$request->returnMsg;
+        $re->save();
+        return redirect()->route('Support.index');
+      }
+    
+    
+      public function reponds($id){
+        $re = chat::select()->where('id',$id)->get();
+        return view('Support.show_msg' , compact('re' ) );
+      }
+    
+    
 
     
 

@@ -5,4 +5,5 @@
 <form action="" method="POST">
     @csrf 
     <input type="text" name="rtrm" value="rtrm">
+    <input type="submit" value="envoyer">
 </form>
