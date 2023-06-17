@@ -56,6 +56,7 @@ Route::group(['prefix' => '/'], function () {
     Route::get('/{id}', [PrincipaleController::class, 'afficher']);
     Route::post('/panier/{id}', [PrincipaleController::class, 'panier']);
     Route::get('/panier/afficher', [PrincipaleController::class, 'afficher_pagnier']);
+    Route::delete('/panier/delete/{id}',[PrincipaleController::class,'delete_panier']);
 });
 
 Route::get('/login', function () {

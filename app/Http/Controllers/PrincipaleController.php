@@ -27,10 +27,43 @@ class PrincipaleController extends Controller
         $panier = panier::join('products', 'paniers.id_game', '=', 'products.id')
             ->where('paniers.id_user', session()->get('user_id'))
             ->where('paniers.confirme', false)
-            ->select('paniers.*', 'products.*')
+            ->select(
+                'paniers.*',
+                'products.game_name',
+                'products.info_game',
+                'products.video',
+                'products.photo_1',
+                'products.photo_2',
+                'products.photo_3',
+                'products.photo_4',
+                'products.price_game',
+                'products.disponibiliter',
+                'products.date',
+                'products.genre',
+                'products.type',
+                'products.Système_dexploitation_min',
+                'products.Processeur_min',
+                'products.Mémoire_vive_min',
+                'products.Graphiques_min',
+                'products.DirectX_min',
+                'products.Espace_disque_min',
+                'products.Système_dexploitation_max',
+                'products.Processeur_max',
+                'products.Mémoire_vive_max',
+                'products.Graphiques_max',
+                'products.DirectX_max',
+                'products.Espace_disque_max',
+                'products.devices'
+            )
             ->get();
-
         return view('Home.panigner', compact('panier'));
+    }
+
+    public function delete_panier($id)
+    {
+        $panier_delete = panier::find($id);
+        $panier_delete->delete();
+        return redirect()->back();
     }
 
 
