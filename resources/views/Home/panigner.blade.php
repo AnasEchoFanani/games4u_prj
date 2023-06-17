@@ -1,6 +1,9 @@
 @extends('Layouts.app_Principale')
-@section('panier','active')
+
+@section('panier', 'active')
+
 @section('content')
+@if(Session::has('user_id'))
 <div class="container mt-5 pt-5">
     <div class="card text-white p-3 mt-2 text-center">
         <div class="row d-flex justify-content-center align-items-center">
@@ -21,7 +24,9 @@
                     <span class="text-danger">Not Buy</span>
                 @endif
             </div>
-            <div class="col-4"><img src="/Folder_img/{{$p->photo_2}}" alt="Folder_img/{{$p->photo_2}}" height="100px" width="200px"></div>
+            <div class="col-4">
+                <img src="/Folder_img/{{$p->photo_2}}" alt="Folder_img/{{$p->photo_2}}" height="100px" width="200px">
+            </div>
             <form action="#" method="POST" class="col-1">
                 @csrf
                 @method('delete')
@@ -31,6 +36,16 @@
     </div>
     @endforeach
 </div>
-
-
+@else
+<div class="container mt-5 pt-5">
+    <div class="card text-center text-white">
+        <div class="card-body">
+            <h1>Welcome to our Game Shop!</h1>
+            <p class="card-text">Join us to unlock a world of amazing games and exclusive deals.</p>
+            <a href="/authentication/register" class="btn btn-buy">Create an Account</a>
+            <p class="mt-3">Already have an account? <a href="/authentication/login"" class="more-link">Login here</a></p>
+        </div>
+    </div>
+</div>
+@endif
 @endsection

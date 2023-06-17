@@ -78,6 +78,6 @@ class AuthenticationController extends Controller
     {
         Session::forget('user_id');
 
-        return redirect('/authentication/login');
+        return redirect('/');
     }
 }

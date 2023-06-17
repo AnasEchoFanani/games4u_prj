@@ -12,16 +12,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </head>
+
 <body id="body-pd" class="d-flex flex-column min-vh-100">
     <header class="header" id="header">
         <div class="header_toggle "><i class='bx bx-menu' id="header-toggle"></i>
             <a class="navbar-brand ms-1 " href="#">
             </a>
         </div>
-        @if(Session::has('user_id'))
+
         <div class="col-6">
             <div class="input-group col-4">
                 <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
@@ -30,18 +31,14 @@
                 </div>
             </div>
         </div>
-
+        @if(Session::has('user_id'))
         <div class="header_img">
             <div class="text-white">anas fanani</div>
         </div>
         @else
-        <div class="col d-flex justify-content-center">
-            <div class="input-group  search">
-                <input type="text" class="form-control bg-dark text-white" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button class="btn bg-dark border-white text-white" type="button">Button</button>
-                </div>
-            </div>
+        <div>
+            <a href="/authentication/login" class="btn text-end btn-add-to-shop">Login</a>
+            <a href="/authentication/register" class="btn text-end btn-buy">Register</a>
         </div>
         @endif
 
@@ -68,9 +65,11 @@
                         <span class="nav_name">Stats</span> </a>
                 </div>
             </div>
+            @if(Session::has('user_id'))
             <a href="/authentication/logout" class="nav_link">
                 <i class='bx bx-log-out nav_icon'></i>
                 <span class="nav_name">SignOut</span> </a>
+                @endif
         </nav>
     </div>
     @yield('content')
