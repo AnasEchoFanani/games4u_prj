@@ -129,7 +129,7 @@
                             @csrf
                             <button class="btn btn-add-to-shop fw-semibold btn-lg" type="submit">ADD TO CART</button>
                         </form>
-                        <form action="# method="POST">
+                        <form action="/whish_list/{{$product_id->id}}" method="POST">
                             @csrf
                             <button class="btn btn-add-to-shop fw-bold" type="button"><i class='bx bx-plus-circle'></i>
                                 ADD TO WISHLIST

@@ -12,7 +12,8 @@ return new class extends Migration {
     {
         Schema::create('whish_lists', function (Blueprint $table) {
             $table->id();
-            $table->String('id_product')->nullable();
+            $table->String('id_game')->nullable();
+            $table->String('id_user')->nullable();
             $table->timestamps();
         });
     }

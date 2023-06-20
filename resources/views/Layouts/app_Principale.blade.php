@@ -57,12 +57,10 @@
                     <a href="/panier/afficher" class="nav_link @yield('panier')">
                         <i class='bx bx-basket nav_icon'></i>
                         <span class="nav_name">Basket</span> </a>
-                    <a href="#" class="nav_link">
-                        <i class='bx bx-folder nav_icon'></i>
-                        <span class="nav_name">Files</span> </a>
-                    <a href="#" class="nav_link">
-                        <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
-                        <span class="nav_name">Stats</span> </a>
+                    <a href="/whish_list/afficher" class="nav_link @yield('whish_list')">
+                    <i class="fa-solid fa-heart"></i>
+                        <span class="nav_name ">Whish lists</span> </a>
+                   
                 </div>
             </div>
             @if(Session::has('user_id'))
