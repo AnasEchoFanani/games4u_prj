@@ -280,17 +280,11 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'Product deleted successfully');
     }
 
-    public function login(Request $request)
-    {
-        $admin = admin::all();
-    }
-
     public function logout()
-    {
-        if (Session::has('name')) {
-            Session::pull('name');
-            Session::pull('full_name');
-            return redirect('login');
-        }
-    }
+{
+        Session::forget('first_name');
+    
+    return redirect('/');
+}
+
 }

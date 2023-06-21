@@ -14,8 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->String('id_game')->nullable();
             $table->String('id_user')->nullable();
-            $table->String('quantite_game')->nullable();
-            $table->String('confirme')->nullable();
+            $table->boolean('confirme')->nullable();
             $table->timestamps();
         });
     }

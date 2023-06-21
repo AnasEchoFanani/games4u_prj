@@ -21,11 +21,11 @@ Route::group(['prefix' => 'admin'], function () {
 })->name('admin');
 */
 
-Route::resource('admin', AdminController::class);
-Route::get('/commande', [AdminController::class, 'commande'])->name('commande');
-Route::get('/createGenre', [AdminController::class, 'createGenre'])->name('createGenre');
-Route::post('/storeGenre', [AdminController::class, 'storeGenre'])->name('storeGenre');
-Route::delete('/destroygenre/{id}', [AdminController::class, 'destroyGenre'])->name('destroyGenre');
+Route::resource('admin', AdminController::class)->middleware('CheckAdmin');
+Route::get('/commande', [AdminController::class, 'commande'])->name('commande')->middleware('CheckAdmin');
+Route::get('/createGenre', [AdminController::class, 'createGenre'])->name('createGenre')->middleware('CheckAdmin');
+Route::post('/storeGenre', [AdminController::class, 'storeGenre'])->name('storeGenre')->middleware('CheckAdmin');
+Route::delete('/destroygenre/{id}', [AdminController::class, 'destroyGenre'])->name('destroyGenre')->middleware('CheckAdmin');
 
 //authentication__Route___________________________________________________________________________________________________
 
@@ -53,10 +53,18 @@ Route::group(['prefix' => 'support'], function () {
 
 Route::group(['prefix' => '/'], function () {
     Route::get('/', [PrincipaleController::class, 'index']);
-    Route::get('/{id}', [PrincipaleController::class, 'afficher'])->name('afficher');
-})->name('index');
+    Route::get('/{id}', [PrincipaleController::class, 'afficher']);
+    Route::post('/panier/{id}', [PrincipaleController::class, 'panier']);
+    Route::get('/panier/afficher', [PrincipaleController::class, 'afficher_pagnier']);
+    Route::delete('/panier/delete/{id}',[PrincipaleController::class,'delete_panier']);
+    Route::get('/buy_game/card',[PrincipaleController::class,'buy']);
+    Route::post('/buy_game/confirm',[PrincipaleController::class,'buy_confirmation']);
+    Route::get('/profile/edite',[PrincipaleController::class,'profile']);
+    Route::post('/profile/store',[PrincipaleController::class,'profile_store']);
+});
 
 Route::get('/login', function () {
     return view('login.login');
 });
+
 

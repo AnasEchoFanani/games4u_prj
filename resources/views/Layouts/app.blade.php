@@ -44,7 +44,7 @@
             </ul>
             <ul class="navbar-nav ms-auto hover">
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white">Deconnexion</a>
+                    <a href="authentication/logout" class="nav-link text-white">Deconnexion</a>
                 </li>
             </ul>
         </div>
