@@ -37,7 +37,11 @@
         </div>
     </div>
     @endforeach
+    <form action="/buy_game/card" method="GET">
+        <button class="btn btn-danger" type="submit">Buy all games</button>
+    </form>
 </div>
+
 <div id="scrollButton" class="scroll-button">
     <i class="fa-solid fa-arrow-down"></i>
 </div>

@@ -25,7 +25,7 @@
 
         <div class="col-6">
             <div class="input-group col-4">
-                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="text" class="form-control" placeholder="search" name="search">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button">Button</button>
                 </div>
@@ -33,7 +33,7 @@
         </div>
         @if(Session::has('user_id'))
         <div class="header_img">
-            <div class="text-white">anas fanani</div>
+            <img src="Folder_img/{{$user->Photo}}" alt="Profile Picture" class="img-fluid">
         </div>
         @else
         <div>
@@ -60,16 +60,17 @@
                     <a href="#" class="nav_link">
                         <i class='bx bx-folder nav_icon'></i>
                         <span class="nav_name">Files</span> </a>
-                    <a href="#" class="nav_link">
-                        <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
-                        <span class="nav_name">Stats</span> </a>
+                        @if(Session::has('user_id'))
+                    <a href="/profile/edite" class="nav_link @yield('profile')">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="nav_name">Profile</span> </a>
                 </div>
             </div>
-            @if(Session::has('user_id'))
+
             <a href="/authentication/logout" class="nav_link">
                 <i class='bx bx-log-out nav_icon'></i>
                 <span class="nav_name">SignOut</span> </a>
-                @endif
+            @endif
         </nav>
     </div>
     @yield('content')
